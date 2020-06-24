@@ -12,14 +12,14 @@ $(function() {
 					datasets: [{
 						label: 'New Visitor',
 						data: [3, 3, 8, 5, 7, 4, 6, 4, 6, 3],
-						backgroundColor: '#14abef',
+						backgroundColor: '#fff',
 						borderColor: "transparent",
 						pointRadius :"0",
 						borderWidth: 3
 					}, {
 						label: 'Old Visitor',
 						data: [7, 5, 14, 7, 12, 6, 10, 6, 11, 5],
-						backgroundColor: "rgba(20, 171, 239, 0.35)",
+						backgroundColor: "rgba(255, 255, 255, 0.25)",
 						borderColor: "transparent",
 						pointRadius :"0",
 						borderWidth: 1
@@ -30,7 +30,7 @@ $(function() {
 				legend: {
 				  display: false,
 				  labels: {
-					fontColor: '#585757',  
+					fontColor: '#ddd',  
 					boxWidth:40
 				  }
 				},
@@ -41,21 +41,21 @@ $(function() {
 				  xAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }],
 				   yAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }]
 				 }
@@ -73,10 +73,10 @@ $(function() {
 					labels: ["Direct", "Affiliate", "E-mail", "Other"],
 					datasets: [{
 						backgroundColor: [
-							"#14abef",
-							"#02ba5a",
-							"#d13adf",
-							"#fba540"
+							"#ffffff",
+							"rgba(255, 255, 255, 0.70)",
+							"rgba(255, 255, 255, 0.50)",
+							"rgba(255, 255, 255, 0.20)"
 						],
 						data: [5856, 2602, 1802, 1105],
 						borderWidth: [0, 0, 0, 0]
@@ -102,40 +102,16 @@ $(function() {
 		
 	// easy pie chart 
 	
-	 $('.easy-dash-chart1').easyPieChart({
+	 $('.easy-dash-chart').easyPieChart({
 		easing: 'easeOutBounce',
-		barColor : '#3b5998',
+		barColor : '#ffffff',
 		lineWidth: 10,
-		trackColor : 'rgba(0, 0, 0, 0.08)',
+		trackColor : 'rgba(255, 255, 255, 0.12)',
 		scaleColor: false,
 		onStep: function(from, to, percent) {
 			$(this.el).find('.w_percent').text(Math.round(percent));
 		}
 	 });	
-
-
-	 $('.easy-dash-chart2').easyPieChart({
-		easing: 'easeOutBounce',
-		barColor : '#55acee',
-		lineWidth: 10,
-		trackColor : 'rgba(0, 0, 0, 0.08)',
-		scaleColor: false,
-		onStep: function(from, to, percent) {
-			$(this.el).find('.w_percent').text(Math.round(percent));
-		}
-	 });
-
-
-	 $('.easy-dash-chart3').easyPieChart({
-		easing: 'easeOutBounce',
-		barColor : '#e52d27',
-		lineWidth: 10,
-		trackColor : 'rgba(0, 0, 0, 0.08)',
-		scaleColor: false,
-		onStep: function(from, to, percent) {
-			$(this.el).find('.w_percent').text(Math.round(percent));
-		}
-	 });
 		
 		
 // worl map
@@ -151,7 +127,7 @@ jQuery('#dashboard-map').vectorMap(
     color: '#009efb',
     regionStyle : {
         initial : {
-          fill : '#14abef'
+          fill : '#fff'
         }
       },
     markerStyle: {
@@ -186,7 +162,7 @@ jQuery('#dashboard-map').vectorMap(
       barWidth: '2',
       resize: true,
       barSpacing: '3',
-      barColor: '#eb5076'
+      barColor: '#fff'
     });
 		
 
@@ -196,7 +172,7 @@ jQuery('#dashboard-map').vectorMap(
       barWidth: '2',
       resize: true,
       barSpacing: '3',
-      barColor: '#14abef'
+      barColor: '#fff'
     });
 
 
@@ -206,7 +182,7 @@ jQuery('#dashboard-map').vectorMap(
       barWidth: '2',
       resize: true,
       barSpacing: '3',
-      barColor: '#02ba5a'
+      barColor: '#fff'
     });
 
 
@@ -216,7 +192,7 @@ jQuery('#dashboard-map').vectorMap(
       barWidth: '2',
       resize: true,
       barSpacing: '3',
-      barColor: '#d13adf'
+      barColor: '#fff'
     });	
 
 
@@ -226,7 +202,7 @@ jQuery('#dashboard-map').vectorMap(
       barWidth: '2',
       resize: true,
       barSpacing: '3',
-      barColor: '#000000'
+      barColor: '#fff'
     });	
 
 	  
@@ -241,8 +217,8 @@ jQuery('#dashboard-map').vectorMap(
           datasets: [{
             label: 'Page Views',
             data: [0, 8, 12, 5, 12, 8, 16, 25, 15, 10, 20, 10, 30],
-            backgroundColor: 'rgba(0, 150, 136, 0.33)',
-            borderColor: '#009688',
+            backgroundColor: 'rgba(255, 255, 255, 0.12)',
+            borderColor: '#fff',
             pointBackgroundColor:'#fff',
             pointHoverBackgroundColor:'#fff',
             pointBorderColor :'#fff',
@@ -287,7 +263,7 @@ jQuery('#dashboard-map').vectorMap(
 					datasets: [{
 						label: 'Total Clicks',
 						data: [0, 10, 14, 18, 12, 8, 16, 25, 15, 10, 20, 10, 30],
-						backgroundColor: "#ff6a00"
+						backgroundColor: "#fff"
 					}]
 				},
 				options: {
@@ -329,11 +305,11 @@ jQuery('#dashboard-map').vectorMap(
 					datasets: [{
 						label: 'Total Earning',
 						data: [39, 19, 25, 16, 31, 39, 23, 20, 23, 18, 15, 20],
-						backgroundColor: "#04b35a"
+						backgroundColor: "#fff"
 					},{
 						label: 'Total Sales',
 						data: [27, 12, 26, 15, 21, 27, 13, 19, 32, 22, 18, 30],
-						backgroundColor: "rgba(4, 179, 90, 0.35)"
+						backgroundColor: "rgba(255, 255, 255, 0.12)"
 					}]
 				},
 				options: {

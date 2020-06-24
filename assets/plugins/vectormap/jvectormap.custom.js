@@ -12,7 +12,7 @@ jQuery('#world-map-markers').vectorMap(
     color: '#009efb',
     regionStyle : {
         initial : {
-          fill : '#14abef'
+          fill : '#fff'
         }
       },
     markerStyle: {
@@ -56,7 +56,7 @@ $('#india').vectorMap({
     zoomOnScroll: false,
             regionStyle : {
                 initial : {
-                    fill : '#02ba5a'
+                    fill : '#fff'
                 }
             }
         });
@@ -68,7 +68,7 @@ $('#india').vectorMap({
             zoomOnScroll: false,
             regionStyle : {
                 initial : {
-                    fill : '#d13adf'
+                    fill : '#fff'
                 }
             }
         });
@@ -81,7 +81,7 @@ $('#india').vectorMap({
             zoomOnScroll: false,
             regionStyle : {
                 initial : {
-                    fill : '#fba540'
+                    fill : '#fff'
                 }
             }
         });
@@ -92,7 +92,7 @@ $('#india').vectorMap({
              zoomOnScroll: false,
             regionStyle : {
                 initial : {
-                    fill : '#eb5076'
+                    fill : '#fff'
                 }
             }
         });

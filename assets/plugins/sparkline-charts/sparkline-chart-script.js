@@ -8,12 +8,12 @@
             barWidth: '3',
             resize: true,
             barSpacing: '4',
-            barColor: '#14abef',
-			spotColor: '#14abef',
-            minSpotColor: '#14abef',
-            maxSpotColor: '#14abef',
-            highlightSpotColor: '#14abef',
-            highlightLineColor: '#14abef'
+            barColor: '#ffffff',
+			spotColor: '#ffffff',
+            minSpotColor: '#ffffff',
+            maxSpotColor: '#ffffff',
+            highlightSpotColor: '#ffffff',
+            highlightLineColor: '#ffffff'
         });
 		
 		
@@ -29,13 +29,13 @@
             width: '150',
             height: '65',
             lineWidth: '2',
-            lineColor: '#02ba5a',
+            lineColor: '#ffffff',
             fillColor: 'transparent',
-            spotColor: '#02ba5a',
-            minSpotColor: '#02ba5a',
-            maxSpotColor: '#02ba5a',
-            highlightSpotColor: '#02ba5a',
-            highlightLineColor: '#02ba5a'
+            spotColor: '#ffffff',
+            minSpotColor: '#ffffff',
+            maxSpotColor: '#ffffff',
+            highlightSpotColor: '#ffffff',
+            highlightLineColor: '#ffffff'
     }); 	
 		
 		
@@ -44,11 +44,11 @@
 		width: '180',
 		height: '65',
 		lineWidth: '2',
-		lineColor: '#d13adf',
-		fillColor: 'rgba(209, 58, 223, 0.33)',
-		maxSpotColor: '#d13adf',
-		highlightLineColor: '#d13adf',
-		highlightSpotColor: '#d13adf'
+		lineColor: '#ffffff',
+		fillColor: 'rgba(255, 255, 255, 0.65)',
+		maxSpotColor: '#ffffff',
+		highlightLineColor: '#ffffff',
+		highlightSpotColor: '#ffffff'
 	  });
   
   
@@ -56,7 +56,7 @@
             type: 'pie',
             height: '200',
             resize: true,
-            sliceColors: ['#14abef', '#02ba5a', '#eb5076']
+            sliceColors: ['rgb(255, 255, 255)', 'rgba(255, 255, 255, 0.65)', 'rgba(255, 255, 255, 0.35)']
         }); 
 
 
@@ -74,7 +74,7 @@
     height: '200',
     barWidth: 6,
     barSpacing: 10,
-    barColor: '#000000'
+    barColor: '#ffffff'
   });
   
 

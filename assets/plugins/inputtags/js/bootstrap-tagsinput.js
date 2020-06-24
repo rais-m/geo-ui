@@ -3,7 +3,7 @@
 
   var defaultOptions = {
     tagClass: function(item) {
-      return 'badge badge-primary';
+      return 'badge badge-light';
     },
     itemValue: function(item) {
       return item ? item.toString() : item;

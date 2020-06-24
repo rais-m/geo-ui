@@ -12,20 +12,20 @@ $(function() {
 					datasets: [{
 						label: 'Support Costs',
 						data: [25, 23, 27, 15, 27, 23, 31, 41, 31, 25, 35],
-						backgroundColor: 'rgba(0, 0, 0, 0.13)',
+						backgroundColor: 'rgba(255, 255, 255, 0.12)',
 						borderColor: "transparent",
 						borderWidth: 3
 					}, {
 						label: 'Revenue',
 						type: 'line',
 						data: [10, 8, 12, 5, 12, 8, 16, 25, 15, 10, 20],
-						backgroundColor: "rgba(243, 38, 89, 0.36)",
-						borderColor: "#f32659",
+						backgroundColor: "rgba(255, 255, 255, 0.12)",
+						borderColor: "#fff",
 						pointBackgroundColor:'transparent',
-                        pointHoverBackgroundColor:'transparent',
-						pointBorderWidth :0,
-						pointRadius :0,
-						pointHoverRadius :0,
+                        pointHoverBackgroundColor:'#fff',
+						pointBorderWidth :3,
+						pointRadius :3,
+						pointHoverRadius :3,
 						borderWidth: 2
 						
 					}]
@@ -35,7 +35,7 @@ $(function() {
 				legend: {
 				  display: true,
 				  labels: {
-					fontColor: '#585757',  
+					fontColor: '#ddd',  
 					boxWidth:40
 				  }
 				},
@@ -44,24 +44,24 @@ $(function() {
 				},	
 			  scales: {
 				  xAxes: [{
-					barPercentage: .3,
+					barPercentage: .5,
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }],
 				   yAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }]
 				 }
@@ -81,7 +81,7 @@ $(function() {
 					datasets: [{
 						label: 'Request Volume',
 						data: [10, 40, 20, 40, 40, 60, 40, 80, 40, 70, 40, 70],
-						backgroundColor: '#02ba5a',
+						backgroundColor: '#fff',
 						borderColor: "transparent",
 						pointRadius :"0",
 						lineTension :'0',
@@ -89,7 +89,7 @@ $(function() {
 					}, {
 						label: 'Service Level',
 						data: [30, 60, 50, 60, 60, 80, 60, 120, 60, 100, 60, 100],
-						backgroundColor: "rgba(2, 186, 90, 0.52)",
+						backgroundColor: "rgba(255, 255, 255, 0.25)",
 						borderColor: "transparent",
 						pointRadius :"0",
 						lineTension :'0',
@@ -101,7 +101,7 @@ $(function() {
 				legend: {
 				  display: true,
 				  labels: {
-					fontColor: '#585757',  
+					fontColor: '#ddd',  
 					boxWidth:40
 				  }
 				},
@@ -112,21 +112,21 @@ $(function() {
 				  xAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }],
 				   yAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }]
 				 }

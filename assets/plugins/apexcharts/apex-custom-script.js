@@ -6,12 +6,12 @@ $(function() {
 
 var options = {
             chart: {
-                height: 350,
+                height: 300,
                 type: 'line',
                 zoom: {
                       enabled: false
                     },
-                foreColor: '#4e4e4e',
+                foreColor: 'rgba(255, 255, 255, 0.85)',
                 toolbar: {
                       show: false
                     },
@@ -46,7 +46,7 @@ var options = {
                 type: 'gradient',
                 gradient: {
                     shade: 'dark',
-                    gradientToColors: [ '#00dbde'],
+                    gradientToColors: [ '#fff'],
                     shadeIntensity: 1,
                     type: 'horizontal',
                     opacityFrom: 1,
@@ -54,14 +54,10 @@ var options = {
                     stops: [0, 100, 100, 100]
                 },
             },
-            colors: ["#fc00ff"],
+            colors: ["#fff"],
             grid:{
                 show: true,
-                borderColor: 'rgba(66, 59, 116, 0.15)',
-            },
-            yaxis: {
-                min: -10,
-                max: 40,                
+                borderColor: 'rgba(255, 255, 255, 0.08)',
             }
         }
 
@@ -78,67 +74,69 @@ var options = {
 
    var options = {
             chart: {
-                height: 350,
+                height: 300,
                 type: 'area',
                 zoom: {
                       enabled: false
                     },
-             foreColor: '#4e4e4e',
-             toolbar: {
-                  show: false
-                }
+                foreColor: 'rgba(255, 255, 255, 0.85)',
+                toolbar: {
+                      show: false
+                    },
+                shadow: {
+                    enabled: false,
+                    color: '#000',
+                    top: 3,
+                    left: 2,
+                    blur: 3,
+                    opacity: 1
+                },
             },
             dataLabels: {
                 enabled: false
             },
             stroke: {
-                width: 0, 
-                curve: 'smooth'
+                width: 4,   
+                curve: 'smooth',
             },
             series: [{
-                name: 'series1',
-                data: [50, 100, 180, 135, 190, 109, 200]
-            }, {
-                name: 'series2',
-                data: [100, 150, 240, 185, 240, 159, 250]
+                name: 'Likes',
+                data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5],
             }],
+
+            tooltip: {
+                enabled: true,
+                theme: 'dark',
+            },
 
             xaxis: {
                 type: 'datetime',
-                categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],                
+                categories: ['1/11/2000', '2/11/2000', '3/11/2000', '4/11/2000', '5/11/2000', '6/11/2000', '7/11/2000', '8/11/2000', '9/11/2000', '10/11/2000', '11/11/2000', '12/11/2000', '1/11/2001', '2/11/2001', '3/11/2001','4/11/2001' ,'5/11/2001' ,'6/11/2001'],
             },
-
             fill: {
                 type: 'gradient',
                 gradient: {
                     shade: 'dark',
-                    gradientToColors: [ '#ff5447', '#08a50e'],
+                    gradientToColors: [ '#fff'],
                     shadeIntensity: 1,
-                    type: 'horizontal',
+                    type: 'vertical',
                     opacityFrom: 1,
                     opacityTo: 1,
                     stops: [0, 100, 100, 100]
                 },
             },
-            colors: ["#f1076f", "#cddc35"],
+            colors: ["#fff"],
             grid:{
                 show: true,
-                borderColor: 'rgba(66, 59, 116, 0.15)',
-            },
-            tooltip: {
-                theme: 'dark',
-                x: {
-                    format: 'dd/MM/yy HH:mm',
-                },
-
+                borderColor: 'rgba(255, 255, 255, 0.08)',
             }
         }
 
-        var chart = new ApexCharts(
+       var chart = new ApexCharts(
             document.querySelector("#chart2"),
             options
         );
-
+        
         chart.render();
 
 
@@ -149,7 +147,7 @@ var options = {
             chart: {
                 height: 350,
                 type: 'bar',
-                foreColor: '#4e4e4e',
+                foreColor: 'rgba(255, 255, 255, 0.85)',
                 toolbar: {
                       show: false
                     }
@@ -157,7 +155,7 @@ var options = {
             plotOptions: {
                 bar: {
                     horizontal: false,
-                    columnWidth: '55%',
+                    columnWidth: '45%',
                     endingShape: 'rounded'  
                 },
             },
@@ -171,7 +169,7 @@ var options = {
             },
             grid:{
                 show: true,
-                borderColor: 'rgba(255, 255, 255, 0.00)',
+                borderColor: 'rgba(255, 255, 255, 0.12)',
             },
             series: [{
                 name: 'Net Profit',
@@ -186,19 +184,7 @@ var options = {
             xaxis: {
                 categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
             },
-            fill: {
-                type: 'gradient',
-                gradient: {
-                    shade: 'dark',
-                    gradientToColors: [ '#00c8ff', '#08a50e', '#7f00ff'],
-                    shadeIntensity: 1,
-                    type: 'horizontal',
-                    opacityFrom: 1,
-                    opacityTo: 1,
-                    stops: [0, 100, 100, 100]
-                },
-            },
-            colors: ["#0072ff", "#cddc35", "#e100ff"],
+            colors: ["#fff", "rgba(255, 255, 255, 0.50)", "rgba(255, 255, 255, 0.25)"],
             tooltip: {
                 theme: 'dark',
                 y: {
@@ -206,7 +192,33 @@ var options = {
                         return "$ " + val + " thousands"
                     }
                 }
-            }
+            },
+			responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+						height: 330,
+						stacked: true,
+                    },
+					legend: {
+						show: !0,
+						position: "top",
+						horizontalAlign: "left",
+						offsetX: -20,
+						fontSize: "10px",
+						markers: {
+						  radius: 50,
+						  width: 10,
+						  height: 10
+						}
+					  },
+					  plotOptions: {
+						bar: {
+						  columnWidth: '30%'
+							}
+						}
+                }
+            }]
         }
 
         var chart = new ApexCharts(
@@ -224,19 +236,18 @@ var options = {
             chart: {
                 height: 280,
                 type: 'donut',
-                foreColor: '#4e4e4e',
+                foreColor: 'rgba(255, 255, 255, 0.85)',
             },
             dataLabels: {
                 enabled: false
             },
             series: [44, 55, 41, 60],
-            fill: {
-                type: 'gradient',
-                gradient: {
-                    gradientToColors: [ '#ee0979', '#08a50e', '#7f00ff', '#2575fc'],
-                },
-            },
-            colors: ["#ff6a00", "#cddc35", "#e100ff", '#6a11cb'],
+			legend: {
+			itemMargin: {
+				horizontal: 2
+					}
+				},
+            colors: ["#fff", "rgba(255, 255, 255, 0.60)", "rgba(255, 255, 255, 0.40)", 'rgba(255, 255, 255, 0.20)'],
             legend: {
                 formatter: function(val, opts) {
                     return val + " - " + opts.w.globals.series[opts.seriesIndex]
@@ -246,7 +257,7 @@ var options = {
                 breakpoint: 480,
                 options: {
                     chart: {
-                        height: 330,
+						height: 330,
                     },
                     legend: {
                         position: 'bottom'
@@ -270,19 +281,13 @@ var options = {
             chart: {
                 height: 280,
                 type: 'pie',
-                foreColor: '#4e4e4e',
+                foreColor: 'rgba(255, 255, 255, 0.85)',
             },
             dataLabels: {
                 enabled: true
             },
             series: [44, 55, 41, 60],
-            fill: {
-                type: 'gradient',
-                gradient: {
-                    gradientToColors: [ '#2af598', '#fc4a1a', '#fc00ff', '#f7971e'],
-                },
-            },
-            colors: ["#009efd", "#f7b733", "#00dbde", '#ffd200'],
+            colors: ["#fff", "rgba(255, 255, 255, 0.60)", "rgba(255, 255, 255, 0.40)", 'rgba(255, 255, 255, 0.20)'],
             legend: {
                 formatter: function(val, opts) {
                     return val + " - " + opts.w.globals.series[opts.seriesIndex]
@@ -317,7 +322,7 @@ var options = {
             chart: {
                 height: 350,
                 type: 'radar',
-				foreColor: '#4e4e4e',
+				foreColor: 'rgba(255, 255, 255, 0.85)',
 				toolbar: {
                       show: false
                     },
@@ -338,29 +343,23 @@ var options = {
                 name: 'Series 3',
                 data: [44, 76, 78, 13, 43, 10],
             }],
-			
-            title: {
-                text: 'Radar Chart - Multi Series'
-            },
             stroke: {
                 width: 0
             },
-           fill: {
-                type: 'gradient',
-                gradient: {
-                    shade: 'dark',
-                    gradientToColors: ['#0072ff', '#d13adf', '#cddc35'],
-                    shadeIntensity: 1,
-                    type: 'horizontal',
-                    opacityFrom: 1,
-                    opacityTo: 1,
-                    stops: [0, 100, 100, 100]
-                },
-            },
-			colors: ["#00c8ff", "#f1076f", "#08a50e"],
+			plotOptions: {
+			radar: {
+				polygons: {
+					strokeColors: 'rgba(255, 255, 255, 0.12)',
+					fill: {
+						  colors: ['transparent', 'transparent']
+					  }
+				  }
+				}
+			},
+			colors: ["#fff", "rgba(255, 255, 255, 0.60)", "rgba(255, 255, 255, 0.40)", 'rgba(255, 255, 255, 0.20)'],
 			grid:{
                 show: false,
-                borderColor: 'rgba(66, 59, 116, 0.15)',
+                borderColor: 'rgba(255, 255, 255, 0.08)',
             },
             markers: {
                 size: 0
@@ -375,6 +374,7 @@ var options = {
 
         chart.render();
 
+		
       
 	  // chart 7
 	  
@@ -385,19 +385,40 @@ var options = {
             },
             plotOptions: {
                 radialBar: {
+                    hollow: {
+                        margin: 10,
+                        size: '60%',
+                        background: 'transparent',
+                        image: undefined,
+                        imageOffsetX: 0,
+                        imageOffsetY: 0,
+                        position: 'front',
+                        dropShadow: {
+                          enabled: false,
+                          top: 3,
+                          left: 0,
+                          blur: 4,
+                          opacity: 0.24
+                        }
+                      },
+                      track: {
+                        background: 'rgba(255, 255, 255, 0.12)',
+                        strokeWidth: '20%',
+                        margin: 5, // margin is in pixels
+                      },
                     dataLabels: {
                         name: {
 							
                             fontSize: '22px',
                         },
                         value: {
-							color: '#4e4e4e',
+							color: '#fff',
                             fontSize: '16px',
                         },
                         total: {
                             show: true,
                             label: 'Total',
-							color: '#4e4e4e',
+							color: '#fff',
                             formatter: function (w) {
                                 // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
                                 return 249
@@ -406,18 +427,7 @@ var options = {
                     }
                 }
             },
-			fill: {
-                type: 'gradient',
-                gradient: {
-                    shade: 'dark',
-                    gradientToColors: [ '#d13adf', '#d13adf', '#f7971e', '#08a50e'],
-                    shadeIntensity: 1,
-                    opacityFrom: 1,
-                    opacityTo: 1,
-                    stops: [0, 100, 100, 100]
-                },
-            },
-			colors: ["#8f50ff", "#f1076f", "#ffd200", "#cddc35"],
+			colors: ["#fff", "rgba(255, 255, 255, 0.60)", "rgba(255, 255, 255, 0.40)", 'rgba(255, 255, 255, 0.20)'],
             series: [44, 55, 67, 83],
             labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
             
@@ -445,12 +455,12 @@ var options = {
       },
       plotOptions: {
         radialBar: {
-          //startAngle: -135,
-          //endAngle: 225,
+          startAngle: -135,
+          endAngle: 225,
            hollow: {
             margin: 0,
             size: '70%',
-            background: '#000',
+            background: 'transparent',
             image: undefined,
             imageOffsetX: 0,
             imageOffsetY: 0,
@@ -464,7 +474,7 @@ var options = {
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
@@ -502,14 +512,14 @@ var options = {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#5204ce'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#f14793"],
+      colors: ["#fff"],
       series: [75],
       stroke: {
         lineCap: 'round'
@@ -570,13 +580,13 @@ var options = {
                     dataLabels: {
                         name: {
                             fontSize: '14px',
-                            color: '#000',
+                            color: '#fff',
                             offsetY: -10
                         },
                         value: {
                             offsetY: 0,
                             fontSize: '22px',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -616,13 +626,13 @@ var options = {
               shade: 'dark',
               type: 'horizontal',
               shadeIntensity: 0.5,
-              gradientToColors: ['#0575e6'],
+              gradientToColors: ['#fff'],
               inverseColors: false,
               opacityFrom: 1,
               opacityTo: 1,
               stops: [0, 100]
             }
-         }, colors: ["#00f260"],
+         }, colors: ["#fff"],
             series: [87],
             labels: ['Median Ratio'],
             

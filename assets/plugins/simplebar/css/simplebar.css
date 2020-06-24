@@ -57,7 +57,7 @@
 .simplebar-scrollbar:before {
     position: absolute;
     content: "";
-    background: rgba(121, 52, 243, 0.25);
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 7px;
     left: 0;
     right: 0;

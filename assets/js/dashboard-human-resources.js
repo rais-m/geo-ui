@@ -8,7 +8,7 @@ $(function() {
                 height: 325,
                 type: 'bar',
                 stacked: false,
-                foreColor: '#4e4e4e',
+                foreColor: 'rgba(255, 255, 255, 0.65)',
                 toolbar: {
                       show: false
                     },
@@ -45,11 +45,11 @@ $(function() {
                 width: [0, 0, 0],
                 dashArray: [0, 0, 0],
                 curve: 'smooth'
-               // colors: ['transparent']
+               //colors: ['transparent']
             },
             grid:{
                 show: true,
-                borderColor: 'rgba(0, 0, 0, 0.10)',
+                borderColor: 'rgba(255, 255, 255, 0.12)',
             },
             series: [{
                 name: 'External Costs',
@@ -64,19 +64,7 @@ $(function() {
             xaxis: {
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
             },
-            fill: {
-                type: 'gradient',
-                gradient: {
-                    shade: 'dark',
-                    gradientToColors: [ '#009efd', '#ff6a00', '#000428'],
-                    shadeIntensity: 1,
-                    type: 'vertical',
-                    opacityFrom: 1,
-                    opacityTo: 1,
-                    stops: [0, 100, 100, 100]
-                },
-            },
-            colors: ["#2af598", "#ee0979", '#0072ff'],
+            colors: ["#fff", "rgba(255, 255, 255, 0.50)", 'rgba(255, 255, 255, 0.10)'],
             tooltip: {
                 theme: 'dark',
                 y: {
@@ -85,32 +73,32 @@ $(function() {
                     }
                 }
             },
-            responsive: [{
+			responsive: [{
                 breakpoint: 480,
                 options: {
                     chart: {
-                  height: 330,
-                  stacked: true,
-                          },
-                legend: {
-                  show: !0,
-                  position: "top",
-                  horizontalAlign: "left",
-                  offsetX: -20,
-                  fontSize: "10px",
-                  markers: {
-                    radius: 50,
-                    width: 10,
-                    height: 10
-                  }
-                  },
-                  plotOptions: {
-                  bar: {
-                    columnWidth: '30%'
-                    }
-                  }
-                      }
-                  }]
+						height: 330,
+						stacked: true,
+                    },
+					legend: {
+						show: !0,
+						position: "top",
+						horizontalAlign: "left",
+						offsetX: -20,
+						fontSize: "10px",
+						markers: {
+						  radius: 50,
+						  width: 10,
+						  height: 10
+						}
+					  },
+					  plotOptions: {
+						bar: {
+						  columnWidth: '30%'
+							}
+						}
+                }
+            }]
         }
 
         var chart = new ApexCharts(
@@ -121,14 +109,11 @@ $(function() {
         chart.render();
 
 
-
-
-
 // chart 2
     
     var options = {
             chart: {
-                height: 365,
+                height: 360,
                 type: 'radialBar',
             },
             plotOptions: {
@@ -137,8 +122,8 @@ $(function() {
                   //endAngle: 135,
                   hollow: {
                       margin: 12,
-                      size: '45%',
-                      background: '#fff',
+                      size: '50%',
+                      background: 'rgba(255, 255, 255, 0.12)',
                       image: undefined,
                       imageOffsetX: 0,
                       imageOffsetY: 0,
@@ -152,7 +137,7 @@ $(function() {
                       }
                     },
                     track: {
-                      background: '#eeedfb',
+                      background: 'rgba(255, 255, 255, 0.06)',
                       strokeWidth: '100%',
                       margin: 5, // margin is in pixels
                       dropShadow: {
@@ -165,19 +150,19 @@ $(function() {
                     },
                     dataLabels: {
                         name: {
-                            color:'#000',
+                            color:'#fff',
                             fontSize: '14px',
                             offsetY: -5
                         },
                         value: {
-                            color: '#000',
+                            color: '#fff',
                             fontSize: '25px',
                             offsetY: 5
                         },
                         total: {
                             show: true,
                             label: 'Total',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (w) {
                                 // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
                                 return 300
@@ -189,28 +174,9 @@ $(function() {
             stroke: {
                lineCap: "round",
            },
-      fill: {
-              type: 'gradient',
-                gradient: {
-                    shade: 'dark',
-                    gradientToColors: [ '#d13adf', '#d13adf', '#f7971e', '#08a50e'],
-                    shadeIntensity: 1,
-                    opacityFrom: 1,
-                    opacityTo: 1,
-                    stops: [0, 100, 100, 100]
-                },
-            },
-      colors: ["#8f50ff", "#f1076f", "#ffd200", "#cddc35"],
+            colors: ["#fff", "rgba(255, 255, 255, 0.50)", "rgba(255, 255, 255, 0.25)", "rgba(255, 255, 255, 0.12)"],
             series: [90, 80, 70, 60],
-            labels: ['Career Page', 'Referral', 'Agency', 'Job Boards'],
-			responsive: [{
-                breakpoint: 1280,
-                options: {
-                    chart: {
-                        height: 350
-                    }
-                }
-            }]
+            labels: ['Career Page', 'Referral', 'Agency', 'Job Boards']
             
         }
 
@@ -239,7 +205,7 @@ $(function() {
                     hollow: {
                       margin: 0,
                       size: '65%',
-                      background: '#fff',
+                      background: 'rgba(0, 0, 0, 0.0)',
                       image: undefined,
                       imageOffsetX: 0,
                       imageOffsetY: 0,
@@ -253,7 +219,7 @@ $(function() {
                       }
                     },
                     track: {
-                      background: '#fff',
+                      background: 'rgba(255, 255, 255, 0.12)',
                       strokeWidth: '100%',
                       margin: 0, // margin is in pixels
                       dropShadow: {
@@ -267,14 +233,14 @@ $(function() {
                     dataLabels: {
                         name: {
                             fontSize: '14px',
-                            color: '#000',
+                            color: '#fff',
                             offsetY: -10,
               show: false
                         },
                         value: {
                             offsetY: 6,
                             fontSize: '20px',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -287,7 +253,7 @@ $(function() {
                 gradient: {
                     shade: 'dark',
                     shadeIntensity: 0.15,
-                    gradientToColors: ['#f14793'],
+                    gradientToColors: ['#fff'],
                     inverseColors: false,
                     opacityFrom: 1,
                     opacityTo: 1,
@@ -297,7 +263,7 @@ $(function() {
             stroke: {
                 dashArray: 4,
             },
-            colors: ["#5204ce"],
+            colors: ["#fff"],
             series: [64],
             labels: ['Screening Calls'],
             
@@ -329,7 +295,7 @@ $(function() {
                     hollow: {
                       margin: 0,
                       size: '65%',
-                      background: '#fff',
+                      background: 'rgba(0, 0, 0, 0.0)',
                       image: undefined,
                       imageOffsetX: 0,
                       imageOffsetY: 0,
@@ -343,7 +309,7 @@ $(function() {
                       }
                     },
                     track: {
-                      background: '#fff',
+                      background: 'rgba(255, 255, 255, 0.12)',
                       strokeWidth: '100%',
                       margin: 0, // margin is in pixels
                       dropShadow: {
@@ -357,14 +323,14 @@ $(function() {
                     dataLabels: {
                         name: {
                             fontSize: '14px',
-                            color: '#000',
+                            color: '#fff',
                             offsetY: -10,
               show: false
                         },
                         value: {
                             offsetY: 6,
                             fontSize: '20px',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -377,7 +343,7 @@ $(function() {
                 gradient: {
                     shade: 'dark',
                     shadeIntensity: 0.15,
-                    gradientToColors: ['#ff5447'],
+                    gradientToColors: ['#fff'],
                     inverseColors: false,
                     opacityFrom: 1,
                     opacityTo: 1,
@@ -387,7 +353,7 @@ $(function() {
             stroke: {
                 dashArray: 4,
             },
-            colors: ["#f1076f"],
+            colors: ["#fff"],
             series: [76],
             labels: ['Assignments'],
             
@@ -418,7 +384,7 @@ $(function() {
                     hollow: {
                       margin: 0,
                       size: '65%',
-                      background: '#fff',
+                      background: 'rgba(255, 255, 255, 0.0)',
                       image: undefined,
                       imageOffsetX: 0,
                       imageOffsetY: 0,
@@ -432,7 +398,7 @@ $(function() {
                       }
                     },
                     track: {
-                      background: '#fff',
+                      background: 'rgba(255, 255, 255, 0.12)',
                       strokeWidth: '100%',
                       margin: 0, // margin is in pixels
                       dropShadow: {
@@ -446,14 +412,14 @@ $(function() {
                     dataLabels: {
                         name: {
                             fontSize: '14px',
-                            color: '#000',
+                            color: '#fff',
                             offsetY: -10,
               show: false
                         },
                         value: {
                             offsetY: 6,
                             fontSize: '20px',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -466,7 +432,7 @@ $(function() {
                 gradient: {
                     shade: 'dark',
                     shadeIntensity: 0.15,
-                    gradientToColors: ['#0575e6'],
+                    gradientToColors: ['#fff'],
                     inverseColors: false,
                     opacityFrom: 1,
                     opacityTo: 1,
@@ -476,7 +442,7 @@ $(function() {
             stroke: {
                 dashArray: 4,
             },
-            colors: ["#00f260"],
+            colors: ["#fff"],
             series: [83],
             labels: ['interviews'],
             
@@ -509,7 +475,7 @@ $(function() {
            hollow: {
             margin: 20,
             size: '70%',
-            background: '#000',
+            background: 'transparent',
             image: undefined,
             imageOffsetX: 0,
             imageOffsetY: 0,
@@ -523,7 +489,7 @@ $(function() {
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
@@ -560,14 +526,14 @@ $(function() {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#f1076f'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-     // colors: ["#ff5447"],
+      colors: ["#fff"],
       series: [75],
       stroke: {
         lineCap: 'round'
@@ -577,7 +543,7 @@ $(function() {
     }
 
     var chart = new ApexCharts(
-      document.querySelector("#vacancy-status"),
+      document.querySelector("#vacancies-status"),
       options
     );
 
@@ -590,8 +556,9 @@ $(function() {
 
 var options = {
             chart: {
-                height: 380,
+                height: 387,
                 type: 'bar',
+				foreColor: 'rgba(255, 255, 255, 0.65)',
                 toolbar: {
                   show: false
                 },
@@ -617,16 +584,16 @@ var options = {
              fill: {
                 type: 'gradient',
                 gradient: {
-                    shade: 'dark',
-                    gradientToColors: [ '#8f50ff', '#0072ff', '#f1076f', '#08a50e', '#f7971e', '#fc00ff', '#000428', '#ba8b02', '#009efd', '#000000'],
-                    shadeIntensity: 1,
-                    type: 'horizontal',
-                    opacityFrom: 1,
-                    opacityTo: 1,
+                    shade: 'light',
+                    gradientToColors: [ '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
+                    shadeIntensity: 0.60,
+                    type: 'vertical',
+                    opacityFrom: 0.5,
+                    opacityTo: 0.5,
                     stops: [0, 100, 100, 100]
                 },
             },
-            colors: ['#d13adf', '#00c8ff', '#ff5447', '#cddc35', '#ffd200', '#00dbde', '#004e92', '#181818', '#2af598', '#ffffff'],
+            colors: ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
             dataLabels: {
                 enabled: true,
                 textAnchor: 'start',
@@ -650,7 +617,7 @@ var options = {
 
             },
             xaxis: {
-                categories: ['Direct', 'Google', 'Medium.com', 'Git Hub', 'Envato', 'Youtube', 'cs.champion.com', 'T.co', 'Facebbok', 'LinkedIn'],
+                categories: ['Direct', 'Google', 'Medium.com', 'Github', 'Envato', 'Youtube', 'cs.champion.com', 'T.co', 'Facebbok', 'LinkedIn'],
             },
             yaxis: {
                 labels: {
@@ -669,11 +636,15 @@ var options = {
                         }
                     }
                 }
-            }
+            },
+			grid:{
+			  show: true,
+			  borderColor: 'rgba(255, 255, 255, 0.12)',
+	        }
         }
 
        var chart = new ApexCharts(
-            document.querySelector("#top-refefrers"),
+            document.querySelector("#top-referrers"),
             options
         );
         
@@ -698,17 +669,17 @@ var options1 = {
         type: 'gradient',
           gradient: {
               shade: 'light',
-              //gradientToColors: [ '#8f50ff'],
+              //gradientToColors: ['rgba(255, 255, 255, 0.12)'],
               shadeIntensity: 1,
               type: 'vertical',
               opacityFrom: 0.7,
-              opacityTo: 0.2,
+              opacityTo: 0.1,
               stops: [0, 100, 100, 100]
           },
       },
-      colors: ["#f7971e"],
+      colors: ["#fff"],
       series: [{
-        name: 'New Users',
+        name: 'Employee NPS',
         data: [25, 66, 41, 59, 25, 44, 12, 36, 9, 21]
       }],
       stroke: {
@@ -717,24 +688,12 @@ var options1 = {
               dashArray: [0]
          },
       tooltip: {
-        theme: 'dark',
-        fixed: {
-          enabled: false
-        },
-        x: {
-          show: false
-        },
-        y: {
-          title: {
-            formatter: function (seriesName) {
-              return ''
-            }
+              theme: 'dark',
+              x: {
+                  show: false
+              },
+
           }
-        },
-        marker: {
-          show: false
-        }
-      }
     }
 
     new ApexCharts(document.querySelector("#emp-nps"), options1).render();
@@ -758,16 +717,17 @@ var options1 = {
         type: 'gradient',
           gradient: {
               shade: 'light',
-              //gradientToColors: [ '#00c8ff'],
+              //gradientToColors: ['rgba(255, 255, 255, 0.12)'],
               shadeIntensity: 1,
               type: 'vertical',
               opacityFrom: 0.7,
-              opacityTo: 0.2,
+              opacityTo: 0.1,
               stops: [0, 100, 100, 100]
           },
       },
-      colors: ["#0072ff"],
+      colors: ["#fff"],
       series: [{
+        name: 'Training Expenses',
         data: [12, 14, 2, 47, 32, 44, 14, 55, 41, 69]
       }],
       stroke: {
@@ -776,24 +736,12 @@ var options1 = {
                 dashArray: [0]
          },
       tooltip: {
-        theme: 'dark',
-        fixed: {
-          enabled: false
-        },
-        x: {
-          show: false
-        },
-        y: {
-          title: {
-            formatter: function (seriesName) {
-              return ''
-            }
+              theme: 'dark',
+              x: {
+                  show: false
+              },
+
           }
-        },
-        marker: {
-          show: false
-        }
-      }
     }
 
     new ApexCharts(document.querySelector("#training-expenses"), options1).render();
@@ -818,16 +766,17 @@ var options1 = {
         type: 'gradient',
           gradient: {
               shade: 'light',
-              //gradientToColors: [ '#ff5447'],
+              //gradientToColors: ['rgba(255, 255, 255, 0.12)'],
               shadeIntensity: 1,
               type: 'vertical',
               opacityFrom: 0.7,
-              opacityTo: 0.2,
+              opacityTo: 0.1,
               stops: [0, 100, 100, 100]
           },
       },
-      colors: ["#f1076f"],
+      colors: ["#fff"],
       series: [{
+        name: 'CSR Activities',
         data: [47, 45, 74, 32, 56, 31, 44, 33, 45, 19]
       }],
       stroke: {
@@ -836,24 +785,12 @@ var options1 = {
                 dashArray: [0]
          },
       tooltip: {
-        theme: 'dark',
-        fixed: {
-          enabled: false
-        },
-        x: {
-          show: false
-        },
-        y: {
-          title: {
-            formatter: function (seriesName) {
-              return ''
-            }
+              theme: 'dark',
+              x: {
+                  show: false
+              },
+
           }
-        },
-        marker: {
-          show: false
-        }
-      }
     }
 
     new ApexCharts(document.querySelector("#csr-activities"), options1).render();
@@ -878,16 +815,17 @@ var options1 = {
         type: 'gradient',
           gradient: {
               shade: 'light',
-             // gradientToColors: [ '#08a50e'],
+              //gradientToColors: ['rgba(255, 255, 255, 0.12)'],
               shadeIntensity: 1,
-              //type: 'vertical',
+              type: 'vertical',
               opacityFrom: 0.7,
-              opacityTo: 0.2,
+              opacityTo: 0.1,
               stops: [0, 100, 100, 100]
           },
       },
-      colors: ["#08a50e"],
+      colors: ["#fff"],
       series: [{
+        name: 'Starter This Month',
         data: [15, 75, 47, 65, 14, 32, 19, 54, 44, 61]
       }],
       stroke: {
@@ -896,31 +834,17 @@ var options1 = {
                 dashArray: [0]
          },
       tooltip: {
-        theme: 'dark',
-        fixed: {
-          enabled: false
-        },
-        x: {
-          show: false
-        },
-        y: {
-          title: {
-            formatter: function (seriesName) {
-              return ''
-            }
+              theme: 'dark',
+              x: {
+                  show: false
+              },
+
           }
-        },
-        marker: {
-          show: false
-        }
-      }
     }
 
     new ApexCharts(document.querySelector("#starter-this-month"), options1).render();
 
 
-  
-  // chart 12
 
 
   // chart 6
@@ -950,15 +874,15 @@ var options1 = {
             },
             plotOptions: {
                 bar: {
-            columnWidth: '20%',
-              //endingShape: 'rounded',
+            columnWidth: '30%',
+              endingShape: 'rounded',
                 }
             },
             stroke: {
                 width: 0,   
                 curve: 'smooth',
             },
-      dataLabels: {
+            dataLabels: { 
                 enabled: false
             },
             series: [{
@@ -966,50 +890,32 @@ var options1 = {
                 data: [47, 45, 74, 14, 56, 74, 14, 11, 7, 39, 82],
             }],
             yaxis: [{
-          y: 0,
-          offsetX: 0,
-          offsetY: 0,
-          padding: {
-            left: 0,
-            right: 0
-          }
-        }],
-            tooltip: {
-                theme: 'dark',
-                x: {
-                    show: false
-                },
-                y: {
-                    title: {
-                        formatter: function() {
-                            return ''
-                        }
-                    }
-                }
-            },
-            fill: {
-                type: 'gradient',
-                gradient: {
-                shade: 'light',
-                gradientToColors: ['#009efd'],
-                shadeIntensity: 1,
-                type: 'vertical',
-                opacityFrom: 1,
-                opacityTo: 1,
-                stops: [0, 100]
-          }
-            },
-            colors: ["#2af598"],
-            grid:{
-                show: false,
-                borderColor: 'rgba(66, 59, 116, 0.15)',
-            },
-            responsive: [{
+			  y: 0,
+			  offsetX: 0,
+			  offsetY: 0,
+			  padding: {
+				left: 0,
+				right: 0
+			  }
+			}],
+        tooltip: {
+          theme: 'dark',
+          x: {
+              show: false
+          },
+
+      },
+        colors: ["#fff"],
+        grid:{
+            show: false,
+            borderColor: 'rgba(66, 59, 116, 0.15)',
+        },
+			responsive: [{
                 breakpoint: 480,
                 options: {
                     chart: {
                         width: 150,
-            height: 70,
+						height: 70,
                     }
                 }
             }]
@@ -1031,6 +937,7 @@ var options1 = {
             chart: {
                 height: 310,
                 type: 'bar',
+				foreColor: 'rgba(255, 255, 255, 0.65)',
            toolbar: {
                      show: false
                 }
@@ -1052,7 +959,7 @@ var options1 = {
                 offsetY: -20,
                 style: {
                     fontSize: '14px',
-                    colors: ["#304758"]
+                    colors: ["rgba(255, 255, 255, 0.65)"]
                 }
             },
             stroke: {
@@ -1081,22 +988,9 @@ var options1 = {
              },
             grid:{
                 show: true,
-                borderColor: 'rgba(66, 59, 116, 0.15)',
+                borderColor: 'rgba(255, 255, 255, 0.12)',
             }, 
-            fill: {
-                type: 'gradient',
-                gradient: {
-                    shade: 'dark',
-                    gradientToColors: [ '#08a50e'],
-                    shadeIntensity: 1,
-                    type: 'vertical',
-                    inverseColors: false,
-                    opacityFrom: 1,
-                    opacityTo: 1,
-                    stops: [0, 100, 100, 100]
-                },
-            },
-            colors: ["#cddc35"], 
+            colors: ["#ffffff"], 
             yaxis: {
                 axisBorder: {
                     show: false
@@ -1118,11 +1012,11 @@ var options1 = {
                 offsetY: 0,
                 align: 'center',
                 style: {
-                fontSize: '15px',
-                    color: '#444'
+                    fontSize: '15px',
+                    color: '#fff'
                 }
             },
-            responsive: [{
+			responsive: [{
                 breakpoint: 480,
                 options: {
                     chart: {
@@ -1131,18 +1025,18 @@ var options1 = {
                     legend: {
                         position: 'bottom'
                     },
-              title: {
-                text: 'Monthly Application Submitions, 2018',
-                floating: true,
-                offsetY: 0,
-                align: 'center',
-                style: {
-                  fontSize: '13px',
-                  color: '#444'
+					title: {
+						text: 'Monthly Application Submitions, 2018',
+						floating: true,
+						offsetY: 0,
+						align: 'center',
+						style: {
+							fontSize: '13px',
+							color: '#fff'
+						}
+					}
                 }
-              }
-                    }
-                }]
+            }]
         }
 
         var chart = new ApexCharts(
@@ -1164,7 +1058,7 @@ var options = {
                 zoom: {
                       enabled: false
                     },
-             foreColor: '#4e4e4e',
+             foreColor: 'rgba(255, 255, 255, 0.65)',
              toolbar: {
                   show: false
                 },
@@ -1185,7 +1079,7 @@ var options = {
                 enabled: false
             },
             stroke: {
-                width: 0, 
+                width: 2.5, 
                 curve: 'smooth'
             },
             series: [{
@@ -1219,7 +1113,7 @@ var options = {
                 type: 'gradient',
                 gradient: {
                     shade: 'light',
-                    gradientToColors: [ '#e100ff', '#00c8ff'],
+                    gradientToColors: ['rgba(255, 255, 255, 0.1)', '#fff'],
                     shadeIntensity: 1,
                     type: 'vertical',
                     opacityFrom: 1,
@@ -1227,7 +1121,7 @@ var options = {
                     stops: [0, 80, 100]
                 },
             },
-            colors: ['#ff6258', '#0072ff'],
+            colors: ['rgba(255, 255, 255, 0.1)', '#fff'],
             legend: {
                 show: !0,
                 position: "top",
@@ -1242,7 +1136,7 @@ var options = {
               },
             grid:{
                 show: true,
-                borderColor: 'rgba(66, 59, 116, 0.12)',
+                borderColor: 'rgba(255, 255, 255, 0.12)',
             },
             tooltip: {
                 theme: 'dark',
@@ -1251,7 +1145,7 @@ var options = {
                 },
 
             },
-            responsive: [{
+			responsive: [{
                 breakpoint: 480,
                 options: {
                     chart: {

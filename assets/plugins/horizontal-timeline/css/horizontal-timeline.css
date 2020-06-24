@@ -96,7 +96,7 @@ ol,li {
   text-align: center;
   font-size: 1.0rem;
   padding-bottom: 15px;
-  color: #676666;
+  color: rgba(255,255,255,.85);
   /* fix bug on Safari - text flickering while timeline translates */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -163,7 +163,7 @@ ol,li {
   height: 34px;
   width: 34px;
   border-radius: 50%;
-  border: 2px solid rgba(0,0,0,.5);
+  border: 2px solid rgba(255,255,255,.85);
   /* replace text with an icon */
   overflow: hidden;
   color: transparent;
@@ -290,7 +290,7 @@ ol,li {
 }
 .cd-horizontal-timeline .events-content p {
   font-size: 1.4rem;
-  color: #676666;
+  color: rgba(255,255,255,.85);
 }
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
   line-height: 1.6;

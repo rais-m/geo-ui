@@ -12,20 +12,20 @@ $(function() {
 					datasets: [{
 						label: 'Orders',
 						data: [25, 23, 27, 15, 27, 23, 31, 41, 31, 25, 35, 25, 30],
-						backgroundColor: 'rgba(0, 0, 0, 0.07)',
+						backgroundColor: 'rgba(255, 255, 255, 0.12)',
 						borderColor: "transparent",
 						borderWidth: 3
 					}, {
 						label: 'Payments',
 						type: 'line',
 						data: [10, 8, 12, 5, 12, 8, 16, 25, 15, 10, 20, 10, 15],
-						backgroundColor: "rgba(3, 208, 234, 0.23)",
-						borderColor: "#03d0ea",
+						backgroundColor: "rgba(255, 255, 255, 0.12)",
+						borderColor: "#fff",
 						pointBackgroundColor:'transparent',
-                        pointHoverBackgroundColor:'#03d0ea',
-						pointBorderWidth :2,
-						pointRadius :3,
-						pointHoverRadius :3,
+                        pointHoverBackgroundColor:'#fff',
+						pointBorderWidth :3,
+						pointRadius :4,
+						pointHoverRadius :4,
 						borderWidth: 3
 						
 					}]
@@ -35,7 +35,7 @@ $(function() {
 				legend: {
 				  display: false,
 				  labels: {
-					fontColor: '#585757',  
+					fontColor: '#ddd',  
 					boxWidth:40
 				  }
 				},
@@ -44,24 +44,24 @@ $(function() {
 				},	
 			  scales: {
 				  xAxes: [{
-					barPercentage: .3,
+					barPercentage: .4,
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }],
 				   yAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }]
 				 }

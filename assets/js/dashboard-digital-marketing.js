@@ -12,7 +12,7 @@ var options = {
                 zoom: {
                       enabled: false
                     },
-             foreColor: '#4e4e4e',
+             foreColor: 'rgba(255, 255, 255, 0.65)',
              toolbar: {
                   show: false
                 },
@@ -69,18 +69,18 @@ var options = {
 
             },
             fill: {
-                type: 'gradient',
-                gradient: {
-                    shade: 'light',
-                    //gradientToColors: ['#6a11cb'],
-                    shadeIntensity: 1,
-                    type: 'vertical',
-                    opacityFrom: 0.8,
-                    opacityTo: 0.2,
-                    stops: [0, 80, 100]
-                },
-            },
-            //colors: ['#2575fc'],
+				type: 'gradient',
+				  gradient: {
+					  shade: 'light',
+					  //gradientToColors: ['rgba(255, 255, 255, 0.12)'],
+					  shadeIntensity: 1,
+					  type: 'vertical',
+					  opacityFrom: 0.7,
+					  opacityTo: 0.1,
+					  stops: [0, 100, 100, 100]
+				  },
+			  },
+			colors: ["#fff"],
             legend: {
                 show: 0,
                 position: "top",
@@ -130,7 +130,7 @@ var options = {
 					hollow: {
 						margin: 0,
 						size: '65%',
-						background: '#000',
+						background: 'transparent',
 						dropShadow: {
                         enabled: true,
                         top: -3,
@@ -140,7 +140,7 @@ var options = {
                         }
 					  },
                     track: {
-                      background: '#fff',
+                      background: 'rgba(255, 255, 255, 0.12)',
                       strokeWidth: '100%',
                       margin: 0, // margin is in pixels
                       dropShadow: {
@@ -176,15 +176,15 @@ var options = {
               gradient: {
               shade: 'dark',
               type: 'horizontal',
-              shadeIntensity: 0.5,
-              gradientToColors: ['#f31368'],
+              shadeIntensity: 0.15,
+              gradientToColors: ['#fff'],
               inverseColors: false,
               opacityFrom: 1,
               opacityTo: 1,
-              stops: [0, 100]
+              stops: [0, 50, 65, 91]
             }
          },
-		  colors: ["#0ce8fe"],
+		  colors: ["#fff"],
           series: [75],
           labels: ['Median Ratio'],
             
@@ -210,7 +210,7 @@ var options = {
                 zoom: {
                       enabled: false
                     },
-             foreColor: '#4e4e4e',
+             foreColor: 'rgba(255, 255, 255, 0.65)',
              toolbar: {
                   show: false
                 },
@@ -270,7 +270,7 @@ var options = {
                 type: 'gradient',
                 gradient: {
                     shade: 'light',
-                    gradientToColors: ['#8f50ff'],
+                    gradientToColors: ['#fff'],
                     shadeIntensity: 1,
                     type: 'vertical',
                     opacityFrom: 1,
@@ -278,7 +278,7 @@ var options = {
                     stops: [0, 80, 100]
                 },
             },
-            colors: ['#d13adf'],
+            colors: ['#fff'],
             legend: {
                 show: 0,
                 position: "top",
@@ -325,7 +325,7 @@ var options = {
                 zoom: {
                       enabled: false
                     },
-             foreColor: '#4e4e4e',
+             foreColor: 'rgba(255, 255, 255, 0.65)',
              toolbar: {
                   show: false
                 },
@@ -379,13 +379,12 @@ var options = {
                     return parseInt(val);
                   }
                 }
-
             },
             fill: {
                 type: 'gradient',
                 gradient: {
                     shade: 'light',
-                    gradientToColors: ['#00b09b'],
+                    gradientToColors: ['#fff'],
                     shadeIntensity: 1,
                     type: 'horizontal',
                     opacityFrom: 1,
@@ -393,7 +392,7 @@ var options = {
                     stops: [0, 80, 100]
                 },
             },
-            colors: ['#96c93d'],
+            colors: ['#fff'],
             legend: {
                 show: 0,
                 position: "top",
@@ -439,7 +438,7 @@ var options = {
                 zoom: {
                       enabled: false
                     },
-             foreColor: '#4e4e4e',
+             foreColor: 'rgba(255, 255, 255, 0.65)',
              toolbar: {
                   show: true
                 },
@@ -468,7 +467,7 @@ var options = {
                 enabled: false
             },
             stroke: {
-                width: 0, 
+                width: 3, 
                 curve: 'smooth'
             },
             series: [{
@@ -500,18 +499,18 @@ var options = {
                 type: 'gradient',
                 gradient: {
                     shade: 'light',
-                    gradientToColors: ['#ee0979'],
+                    gradientToColors: ['#fff'],
                     shadeIntensity: 1,
                     type: 'vertical',
-                    opacityFrom: 1,
-                    opacityTo: 1,
+                    opacityFrom: 0.8,
+                    opacityTo: 0.2,
                     stops: [0, 100, 100, 100]
                 },
             },
-            colors: ['#ff6a00'],
+            colors: ['#fff'],
             grid:{
                 show: true,
-                borderColor: 'rgba(66, 59, 116, 0.15)',
+                borderColor: 'rgba(255, 255, 255, 0.12)',
             },
             tooltip: {
                 theme: 'dark',
@@ -542,6 +541,7 @@ var options = {
 	  chart: {
 	    height: 70,
 	    type: 'bar',
+		foreColor: 'rgba(255, 255, 255, 0.65)',
 	    stacked: true,
 	    sparkline: {
 	      enabled: true
@@ -552,7 +552,7 @@ var options = {
 	      horizontal: true,
 	      barHeight: '20%',
 	      colors: {
-	        backgroundBarColors: ['#40475D']
+	        backgroundBarColors: ['rgba(255, 255, 255, 0.12)']
 	      }
 	    },
 	  },
@@ -584,10 +584,10 @@ var options = {
 	  fill: {
 	    type: 'gradient',
 	    gradient: {
-	      gradientToColors: ['#F55555']
+	      gradientToColors: ['#fff']
 	    },
 	  },
-	  colors: ['#FCCF31'],
+	  colors: ['#fff'],
 	  tooltip: {
 	  	theme: 'dark',
 	  	x: {
@@ -617,6 +617,7 @@ var options = {
 	  chart: {
 	    height: 70,
 	    type: 'bar',
+		foreColor: 'rgba(255, 255, 255, 0.65)',
 	    stacked: true,
 	    sparkline: {
 	      enabled: true
@@ -627,7 +628,7 @@ var options = {
 	      horizontal: true,
 	      barHeight: '20%',
 	      colors: {
-	        backgroundBarColors: ['#40475D']
+	        backgroundBarColors: ['rgba(255, 255, 255, 0.12)']
 	      }
 	    },
 	  },
@@ -659,10 +660,10 @@ var options = {
 	  fill: {
 	    type: 'gradient',
 	    gradient: {
-	      gradientToColors: ['#6078ea']
+	      gradientToColors: ['#fff']
 	    },
 	  },
-	  colors: ['#17ead9'],
+	  colors: ['#fff'],
 	  tooltip: {
 	  	theme: 'dark',
 	  	x: {
@@ -691,6 +692,7 @@ var options = {
 	  chart: {
 	    height: 70,
 	    type: 'bar',
+		foreColor: 'rgba(255, 255, 255, 0.65)',
 	    stacked: true,
 	    sparkline: {
 	      enabled: true
@@ -701,7 +703,7 @@ var options = {
 	      horizontal: true,
 	      barHeight: '20%',
 	      colors: {
-	        backgroundBarColors: ['#40475D']
+	        backgroundBarColors: ['rgba(255, 255, 255, 0.12)']
 	      }
 	    },
 	  },
@@ -733,10 +735,10 @@ var options = {
 	  fill: {
 	    type: 'gradient',
 	    gradient: {
-	      gradientToColors: ['#6094ea']
+	      gradientToColors: ['#fff']
 	    },
 	  },
-	  colors: ['#f02fc2'],
+	  colors: ['#fff'],
 	  tooltip: {
 	  	theme: 'dark',
 	  	x: {
@@ -765,6 +767,7 @@ var options = {
 	  chart: {
 	    height: 70,
 	    type: 'bar',
+		foreColor: 'rgba(255, 255, 255, 0.65)',
 	    stacked: true,
 	    sparkline: {
 	      enabled: true
@@ -775,7 +778,7 @@ var options = {
 	      horizontal: true,
 	      barHeight: '20%',
 	      colors: {
-	        backgroundBarColors: ['#40475D']
+	        backgroundBarColors: ['rgba(255, 255, 255, 0.12)']
 	      }
 	    },
 	  },
@@ -807,10 +810,10 @@ var options = {
 	  fill: {
 	    type: 'gradient',
 	    gradient: {
-	      gradientToColors: ['#6a11cb']
+	      gradientToColors: ['#fff']
 	    },
 	  },
-	  colors: ['#2575fc'],
+	  colors: ['#fff'],
 	  tooltip: {
 	  	theme: 'dark',
 	  	x: {
@@ -856,24 +859,24 @@ var options = {
             imageOffsetY: 0,
             position: 'front',
             dropShadow: {
-              enabled: true,
+              enabled: false,
               top: 3,
               left: 0,
               blur: 4,
-              color: 'rgba(0, 169, 255, 0.85)',
+              color: 'rgba(255, 255, 255, 0.12)',
               opacity: 0.65
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
-              enabled: true,
+              enabled: false,
               top: -3,
               left: 0,
               blur: 4,
-			  color: 'rgba(0, 169, 255, 0.85)',
+			  color: 'rgba(255, 255, 255, 0.12)',
               opacity: 0.65
             }
           },
@@ -883,14 +886,14 @@ var options = {
             name: {
               offsetY: -5,
               show: false,
-              color: '#000',
+              color: '#fff',
               fontSize: '14px'
             },
             value: {
               formatter: function (val) {
 						return val + "%";
 					},
-              color: '#000',
+              color: '#fff',
               fontSize: '35px',
               show: true,
 			  offsetY: 10,
@@ -904,14 +907,14 @@ var options = {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#0072ff'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#00c8ff"],
+      colors: ["#fff"],
       series: [64],
       stroke: {
         lineCap: 'round',
@@ -953,24 +956,24 @@ var options = {
             imageOffsetY: 0,
             position: 'front',
             dropShadow: {
-              enabled: true,
+              enabled: false,
               top: 3,
               left: 0,
               blur: 4,
-              color: 'rgba(229, 124, 107, 0.85)',
+              color: 'rgba(255, 255, 255, 0.12)',
               opacity: 0.65
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
-              enabled: true,
+              enabled: false,
               top: -3,
               left: 0,
               blur: 4,
-			  color: 'rgba(229, 124, 107, 0.85)',
+			  color: 'rgba(255, 255, 255, 0.12)',
               opacity: 0.65
             }
           },
@@ -980,14 +983,14 @@ var options = {
             name: {
               offsetY: -5,
               show: false,
-              color: '#000',
+              color: '#fff',
               fontSize: '14px'
             },
             value: {
               formatter: function (val) {
 						return val + "%";
 					},
-              color: '#000',
+              color: '#fff',
               fontSize: '35px',
               show: true,
 			  offsetY: 10,
@@ -1001,14 +1004,14 @@ var options = {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#db36a4'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#f7ff00"],
+      colors: ["#fff"],
       series: [68],
       stroke: {
         lineCap: 'round',

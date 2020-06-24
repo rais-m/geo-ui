@@ -60,8 +60,8 @@
       boostat: 10,
       maxboostedstep: false,
       mousewheel: true,
-      buttondown_class: 'btn btn-outline-dark',
-      buttonup_class: 'btn btn-outline-dark',
+      buttondown_class: 'btn btn-light',
+      buttonup_class: 'btn btn-light',
       buttondown_txt: '-',
       buttonup_txt: '+'
     };

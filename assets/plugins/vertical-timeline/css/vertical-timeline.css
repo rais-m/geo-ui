@@ -148,7 +148,7 @@
 .cd-timeline__content {
   position: relative;
   margin-left: 60px;
-  background: #ffffff;
+  background: rgba(19, 17, 15, 0.2);
   border-radius: 0.25em;
   padding: 1em;
   -webkit-box-shadow: 0 3px 0 rgba(255, 255, 255, 0.42);
@@ -197,13 +197,13 @@
 .cd-timeline__read-more {
   float: right;
   padding: .5em 1em;
-  background: #FF5722;
+  background: rgba(255, 255, 255, 0.19);
   color: white;
   border-radius: 0.25em;
 }
 
 .cd-timeline__read-more:hover {
-  background-color: #FF5722;
+  background-color: #5e72e4;
   color: white;
 }
 

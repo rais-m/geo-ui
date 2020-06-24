@@ -13,24 +13,24 @@
 					datasets: [{
 						label: 'Google',
 						data: [13, 20, 4, 18, 7, 4, 8],
-						backgroundColor: "transparent",
-						borderColor: "#14abef",
+						backgroundColor: "rgb(255, 255, 255)",
+						borderColor: "transparent",
 						pointRadius :"0",
-						borderWidth: 2
+						borderWidth: 1
 					}, {
 						label: 'Facebook',
 						data: [3, 30, 6, 6, 3, 4, 11],
-						backgroundColor: "transparent",
-						borderColor: "#d13adf",
+						backgroundColor: "rgba(255, 255, 255, 0.25)",
+						borderColor: "transparent",
 						pointRadius :"0",
-						borderWidth: 2
+						borderWidth: 1
 					}]
 				},
 			options: {
 				legend: {
 				  display: true,
 				  labels: {
-					fontColor: '#585757',  
+					fontColor: '#ddd',  
 					boxWidth:40
 				  }
 				},
@@ -41,21 +41,21 @@
 				  xAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.07)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }],
 				   yAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.07)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }]
 				 }
@@ -75,44 +75,44 @@
 					datasets: [{
 						label: 'Google',
 						data: [13, 20, 4, 18, 29, 25, 8],
-						backgroundColor: "#02ba5a"
+						backgroundColor: "rgba(255, 255, 255, 0.25)"
 					}, {
 						label: 'Facebook',
 						data: [31, 30, 6, 6, 21, 4, 11],
-						backgroundColor: "#03d0ea"
+						backgroundColor: "#fff"
 					}]
 				},
 			options: {
 				legend: {
 				  display: true,
 				  labels: {
-					fontColor: '#585757',  
+					fontColor: '#ddd',  
 					boxWidth:40
 				  }
 				},
 				tooltips: {
-				  enabled:true
+				  enabled:false
 				},	
 			  scales: {
 				  xAxes: [{
 					  barPercentage: .5,
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.07)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }],
 				   yAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.07)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }]
 				 }
@@ -129,10 +129,10 @@
 					labels: ["Lable1", "Lable2", "Lable3", "Lable4"],
 					datasets: [{
 						backgroundColor: [
-							"#14abef",
-							"#02ba5a",
-							"#03d0ea",
-							"#d13adf"
+							"rgba(255, 255, 255, 0.35)",
+							"#ffffff",
+							"rgba(255, 255, 255, 0.12)",
+							"rgba(255, 255, 255, 0.71)"
 						],
 						data: [13, 20, 11, 18],
 						borderWidth: [0, 0, 0, 0]
@@ -143,13 +143,13 @@
 				 position :"right",	
 				 display: true,
 				    labels: {
-					  fontColor: '#585757',  
+					  fontColor: '#ddd',  
 					  boxWidth:15
 				   }
 				},
 			scale: {
 				  gridLines: {
-					   color: "rgba(0, 0, 0, 0.07)" 
+					   color: "rgba(221, 221, 221, 0.12)" 
 					 }, 
 				}
 			   }
@@ -165,10 +165,10 @@
 					labels: ["Lable1", "Lable2", "Lable3", "Lable4"],
 					datasets: [{
 						backgroundColor: [
-							"#eb5076",
-							"#fba540",
-							"#000000",
-							"#03d0ea"
+							"rgba(255, 255, 255, 0.35)",
+							"#ffffff",
+							"rgba(255, 255, 255, 0.12)",
+							"rgba(255, 255, 255, 0.71)"
 						],
 						data: [13, 120, 11, 20],
 						borderWidth: [0, 0, 0, 0]
@@ -179,7 +179,7 @@
 				 position :"right",	
 				 display: true,
 				    labels: {
-					  fontColor: '#585757',  
+					  fontColor: '#ddd',  
 					  boxWidth:15
 				   }
 				}
@@ -196,10 +196,10 @@
 					labels: ["Lable1", "Lable2", "Lable3", "Lable4"],
 					datasets: [{
 						backgroundColor: [
-							"#14abef",
-							"#02ba5a",
-							"#eb5076",
-							"#d13adf"
+							"rgba(255, 255, 255, 0.35)",
+							"#ffffff",
+							"rgba(255, 255, 255, 0.12)",
+							"rgba(255, 255, 255, 0.71)"
 						],
 						data: [13, 120, 11, 20],
 						borderWidth: [0, 0, 0, 0]
@@ -210,7 +210,7 @@
 				 position :"right",	
 				 display: true,
 				    labels: {
-					  fontColor: '#585757',  
+					  fontColor: '#ddd',  
 					  boxWidth:15
 				   }
 				}

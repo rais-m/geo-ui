@@ -9,141 +9,110 @@
   <title>Space4Good</title>
   <!--favicon-->
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"/>
-  <!-- Vector CSS -->
   <!-- simplebar CSS-->
   <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
   <!-- Bootstrap core CSS-->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-  
-  <link href="assets/plugins/fancybox/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css"/>
   <!-- animate CSS-->
   <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
   <!-- Icons CSS-->
   <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
-  <!-- Horizontal menu CSS-->
+  <!-- Horizontal CSS-->
   <link href="assets/css/horizontal-menu.css" rel="stylesheet"/>
   <!-- Custom Style-->
   <link href="assets/css/app-style.css" rel="stylesheet"/>
-  <style>.form-control {
-    height: 38px;
-    font-size: 13px; }
-	
-	.vector_filter {display:none;}
-	</style>
+  <style>
 
+    html, body {
+
+        height: 100% !important;
+
+        margin: 0px;
+
+    }
+
+   .topbar-nav .navbar {
+		background-color: rgba(32, 33, 40, 0.94)  !important;
+		border-bottom: 1px solid rgb(32, 33, 40) !important;
+	}
+</style>
 </head>
 
-<body>
+<body class="bg-theme bg-theme2" id="map">
 
-   <!-- start loader -->
-   <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner"><div class="loader"></div></div></div></div>
+<!-- start loader -->
+   <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
    <!-- end loader -->
 
 <!-- Start wrapper-->
- <div id="wrapper">
- 
-<!--Start topbar header-->
+ <div id="wrapper" style="z-index:9;">
+
+  <!--Start topbar header-->
 <header class="topbar-nav">
  <nav class="navbar navbar-expand">
   <ul class="navbar-nav mr-auto align-items-center">
     <li class="nav-item">
       <a class="nav-link" href="javascript:void();">
         <div class="media align-items-center">
-           <img src="assets/images/dark_logo_transparent.png" class="logo-icon" alt="logo icon">
+           <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon" style="border-radius: 50%;background: #fff;">
           <div class="media-body">
             <h5 class="logo-text">Space4Good</h5>
           </div>
         </div>
      </a>
     </li>
+    <li class="nav-item" style="margin-left: 11px;border-left: 1px solid;padding-left: 16px;">
+      WB - No2 Monitoring Platform
+	</li>
   </ul>
      
-  <ul class="navbar-nav align-items-center right-nav-link">
-
-    <li class="nav-item">
-      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
-        <span class="user-profile"><img src="https://via.placeholder.com/110x110" class="img-circle" alt="user avatar"></span>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-right">
-       <li class="dropdown-item user-details">
-        <a href="javaScript:void();">
-           <div class="media">
-             <div class="avatar"><img class="align-self-start mr-3" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
-            <div class="media-body">
-            <h6 class="mt-2 user-title">Rais Manasiya</h6>
-            <p class="user-subtitle">rais@example.com</p>
-            </div>
-           </div>
-          </a>
-        </li>
-        <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
-      </ul>
-    </li>
-  </ul>
 </nav>
 </header>
 <!--End topbar header-->
 
-<!-- start horizontal Menu -->
-    <nav>
-        <!-- Menu Toggle btn-->
-        <div class="menu-toggle">
-            <h3>Menu</h3>
-            <button type="button" id="menu-btn">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-		
-        <ul id="respMenu" class="horizontal-menu">
-		
-			<li>
-                <a href="javascript:;">
-                    <i class="zmdi zmdi-view-dashboard" aria-hidden="true"></i>
-                    <span class="title">Dashboard</span>
-                </a>
-                
-            </li>
-			
-            <li>
-                <a href="javascript:;">
-                    <i class="zmdi zmdi-accounts-list"></i>
-                    <span class="title">Users</span>
-					</a>
-		   
-            </li>
-		</ul>
-    </nav>
-    <!-- end horizontal Menu -->
+
 
 <div class="clearfix"></div>
 	
   <div class="content-wrapper">
     <div class="container-fluid">
-
-      <!--Start Dashboard Content-->
- 
-
-  <div class="row">
-     <div class="col-12 col-lg-12 col-xl-12">
-       <div class="card">
-         <div class="card-header">Indonasia Region
+     <div class="row mt-3">
+       <div class="col-12 col-lg-6 col-xl-3">
+         
+            <button type="button" class="btn btn-github btn-sm mb-3 text-white">Download CSV</button>
+					
+			<a href="assets/images/graph.png" data-fancybox="group2">
+			<img src="assets/images/chart.png" alt="lightbox" class="lightbox-thumb img-thumbnail">
+			</a>					
              
-           </div>
-         <div class="card-body no-padding" style="padding:1px;">
-			<div class="row">
-				<div class="col-2 col-lg-2 col-xl-2" style="padding-right: 0;">		 
-					<form style="padding: 18px 2px 4px 14px;">
-					<div class="form-group">
-						<select class="form-control" id="year">
-                          <option value="">Year</option>
-						  <option>2019</option>
-                          <option>2020</option>
-                        </select>
-					</div>
-					<div class="form-group">
+       </div>
+       <div class="col-12 col-lg-6 col-xl-3">
+         
+       </div>
+       <div class="col-12 col-lg-6 col-xl-3">
+         
+       </div>
+       <div class="col-12 col-lg-6 col-xl-3">
+         <div class="card">
+            <div class="card-body">
+              <form>
+					
+					<div class="form-group row">
+						<label for="input-21" class="col-sm-4 col-form-label">Year</label>
+						<div class="col-sm-8">
+						<div class="icheck-material-warning" style="width: auto;float: left;margin-right: 13px;">
+						    <input type="radio" name="type" id="user-checkbox1" checked="checked" value="2019" class="type">
+							<label for="user-checkbox1">2019</label>
+						</div>
+						<div class="icheck-material-warning">
+						    <input type="radio" name="type"  id="user-checkbox2"  class="type"  value="2020" >
+							<label for="user-checkbox2">2020</label>
+						</div>
+						</div>
+				   </div>
+					 <div class="form-group row">
+					  <label for="input-21" class="col-sm-4 col-form-label">Month</label>
+					  <div class="col-sm-8">
 						<select class="form-control" id="year">
 							<option value="">Month</option>
                             <option value='01'>January</option>
@@ -159,109 +128,62 @@
 							<option value='11'>November</option>
 							<option value='12'>December</option>
                         </select>
+					  </div>
 					</div>
-					<div class="form-group py-2">
-						<div class="icheck-material-primary" style="width: auto;float: left;margin-right: 13px;">
-						    <input type="radio" name="type" id="user-checkbox1" checked="checked" value="raster" class="type">
-							<label for="user-checkbox1">Raster</label>
+					
+					<div class="form-group row">
+						<div class="col-sm-12">
+						<div class="icheck-material-warning" style="width: auto;float: left;margin-right: 13px;">
+						    <input type="radio" name="region" id="country" checked="checked" value="country" class="type">
+							<label for="country">Country</label>
 						</div>
-						<div class="icheck-material-primary">
-						    <input type="radio" name="type"  id="user-checkbox2"  class="type"  value="vector" >
-							<label for="user-checkbox2">Vector</label>
+						<div class="icheck-material-warning">
+						    <input type="radio" name="region"  id="province"  class="type"  value="province" >
+							<label for="province">Province</label>
+						</div>
 						</div>
 				   </div>
-				   <div class="form-group vector_filter">
-						<select class="form-control" id="year">
-                          <option value="">Country</option>
-						  <option>Indonasia</option>
-                          <option>India</option>
-                        </select>
-					</div>
-					<div class="form-group vector_filter">
-						<select class="form-control" id="year">
-                          <option value="">Province</option>
-						  <option>Jawa Barat</option>
-                          <option>Papua</option>
-                        </select>
-					</div>
-					<div class="form-group text-center">
-						<button type="submit" class="btn btn-primary px-5">Submit</button>
-					</div>
 					</form>
-					
-					<div style="padding: 18px 2px 4px 14px;">
-					
-					
-					</div>
-				</div>
-				<div class="col-10 col-lg-10 col-xl-10">	
-					<button type="button" class="btn btn-danger" style="position: absolute;top: 10px;left: 22px;z-index: 9;">Download CSV</button>
-					<div id="map" style="height: 470px;"></div>
-					
-					<a href="assets/images/graph.png" data-fancybox="group2" style="position: absolute;bottom: 10px;left: 23px;width: 250px;">
-					<img src="assets/images/graph.png" alt="lightbox" class="lightbox-thumb img-thumbnail">
-				    </a>					
-				</div>
-			</div>
+            </div>
          </div>
-         </div>
+       </div>
      </div>
-	 
-	
-  </div><!--End Row-->
-
-
-   
-      <!--End Dashboard Content-->
-<!--start overlay-->
-	  <div class="overlay toggle-menu"></div>
-	<!--end overlay-->
+	  
     </div>
     <!-- End container-fluid-->
     
-    </div><!--End content-wrapper-->
+   </div><!--End content-wrapper-->
    <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->
 	
-	<!--Start footer-->
-	<footer class="footer">
-      <div class="container">
-        <div class="text-center">
-          Copyright © 2020 Space4Good
-        </div>
-      </div>
-    </footer>
-	<!--End footer-->
 	
-  
+	
+
   </div><!--End wrapper-->
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
 	
- <!-- simplebar js -->
-  
+  <!-- simplebar js -->
+  <script src="assets/plugins/simplebar/js/simplebar.js"></script>
   <!-- horizontal-menu js -->
   <script src="assets/js/horizontal-menu.js"></script>
-  <!-- loader scripts -->
-  <script src="assets/js/jquery.loading-indicator.js"></script>
+  
   <!-- Custom scripts -->
   <script src="assets/js/app-script.js"></script>
-  <!-- Chart js -->
-  <script src="assets/plugins/fancybox/js/jquery.fancybox.min.js"></script>
   
-  <!-- Index js -->
   <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoicmFpcy10bSIsImEiOiJjazhhcG9iaXAwNGYwM2x0cTV3MXNlMzJuIn0.xpAEjsKMI_hrKJPPcCmooQ';
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic2hyYXZhbi1zNGciLCJhIjoiY2s4YmRvbnJ1MGI2ZTNsb2FhYThocGk3MSJ9.sj9l-_gVTH7Ff5vheq9m6w';
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11',
+style: 'mapbox://styles/shravan-s4g/ck8aomxlx04j81io7klayynbs',
 center: [116.62362,-1.05278],
 zoom: 4
 });
@@ -282,7 +204,7 @@ map.addLayer({
 'source': 'states',
 'layout': {},
 'paint': {
-'fill-color': '#f04e4e',
+'fill-color': '#ff8800',
 'fill-opacity': [
 'case',
 ['boolean', ['feature-state', 'hover'], false],
@@ -298,7 +220,7 @@ map.addLayer({
 'source': 'states',
 'layout': {},
 'paint': {
-'line-color': '#f04e4e',
+'line-color': '#ff8800',
 'line-width': 2
 }
 });
@@ -350,7 +272,6 @@ hoveredStateId = null;
     });
 </script>
  
-
-  
+	
 </body>
 </html>

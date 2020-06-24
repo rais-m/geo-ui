@@ -15,8 +15,8 @@ $(function () {
 	  ykeys: ['y', 'z', 'a'],
 	  labels: ['Y', 'Z', 'A'],
 	  barColors: ['#03d0ea', '#d13adf', '#fba540'],
-	  gridTextColor : "#585757",
-	  resize: true, //defaulted to true
+	  gridTextColor : "#ddd",
+	  resize: true
 	});
 	
 	
@@ -35,7 +35,7 @@ $(function () {
 			'#02ba5a'
 		],
 		resize: true,
-		labelColor: "#000",
+		labelColor: "#ffffff",
 	  formatter: function (x) { return x + "%"}
 	});
 	
@@ -55,7 +55,7 @@ $(function () {
 		  labels: ['Y', 'Z'],
 		  lineColors: ['#fba540', '#03d0ea'],
 		  resize: true,
-		  gridTextColor : "#585757",
+		  gridTextColor : "#ddd",
 		  fillOpacity: 0.1,
 		});
 	
@@ -76,7 +76,7 @@ $(function () {
 	  ykeys: ['y', 'z'],
 	  labels: ['Y', 'Z'],
 	  lineColors: ['#eb5076', '#14abef'],
-	  gridTextColor : "#585757",
+	  gridTextColor : "#ddd",
 	  resize: true
 	});
 	

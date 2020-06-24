@@ -31,12 +31,12 @@ $(document).ready(function() {
 
                 $("input[name='demo4']").TouchSpin({
                 postfix: "a button",
-                postfix_extraclass: "btn btn-secondary btn-sm"
+                postfix_extraclass: "btn btn-light btn-sm"
             });
 
                  $("input[name='demo4_2']").TouchSpin({
                 postfix: "a button",
-                postfix_extraclass: "btn btn-secondary btn-lg"
+                postfix_extraclass: "btn btn-light btn-lg"
             });
 
             $("input[name='demo5']").TouchSpin({

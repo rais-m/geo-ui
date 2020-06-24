@@ -26,20 +26,20 @@ $(function() {
 					labels: ["Within Time Limit", "Out of Time Limit"],
 					datasets: [{
 						backgroundColor: [
-							"#fba540",
-							"#03d0ea"
+							"#ffffff",
+							"rgba(255, 255, 255, 0.30)"
 						],
 						data: [325, 145],
 						borderWidth: [0, 0]
 					}]
 				},
 			options: {
-				maintainAspectRatio: false,
+			   maintainAspectRatio: false,
 			   legend: {
 				 position :"bottom",	
 				 display: false,
 				    labels: {
-					  fontColor: '#585757',  
+					  fontColor: '#ddd',  
 					  boxWidth:15
 				   }
 				}
@@ -60,22 +60,22 @@ $(function() {
 					labels: ["Germany", "France", "Switzerland", "Australia"],
 					datasets: [{
 						backgroundColor: [
-							"#14abef",
-							"#02ba5a",
-							"#d13adf",
-							"#fba540"
+							"rgba(255, 255, 255, 0.35)",
+							"#ffffff",
+							"rgba(255, 255, 255, 0.15)",
+							"rgba(255, 255, 255, 0.71)"
 						],
 						data: [55, 220, 40, 40],
 						borderWidth: [0, 0, 0, 0]
 					}]
 				},
 			options: {
-				maintainAspectRatio: false,
+			   maintainAspectRatio: false,
 			   legend: {
 				 position :"bottom",	
 				 display: true,
 				    labels: {
-					  fontColor: '#585757',  
+					  fontColor: '#ddd',  
 					  boxWidth:10
 				   }
 				}
@@ -231,16 +231,6 @@ $(function() {
     // chart 6
 
 			var ctx = document.getElementById("timeChart").getContext('2d');
-
-
-      var gradientStroke3 = ctx.createLinearGradient(0, 0, 0, 300);
-      gradientStroke3.addColorStop(0, '#42e695');
-      gradientStroke3.addColorStop(1, '#3bb2b8');
-
-      var gradientStroke4 = ctx.createLinearGradient(0, 0, 0, 300);
-      gradientStroke4.addColorStop(0, ' #7f00ff');
-      gradientStroke4.addColorStop(0.5, '#e100ff');
-
 			var myChart = new Chart(ctx, {
 				type: 'bar',
 				data: {
@@ -248,13 +238,11 @@ $(function() {
 					datasets: [{
 						label: 'Route',
 						data: [15, 8, 12, 5, 12, 8, 16, 25, 15, 10, 20, 10],
-						backgroundColor: gradientStroke3,
-            hoverBackgroundColor: gradientStroke3
+						backgroundColor: "rgba(255, 255, 255, 0.25)"
 					}, {
 						label: 'Time',
 						data: [25, 18, 22, 15, 22, 18, 26, 35, 25, 20, 30, 20],
-						backgroundColor: gradientStroke4,
-            hoverBackgroundColor: gradientStroke4,
+						backgroundColor: "#fff"
 					}]
 				},
 			options: {
@@ -262,34 +250,33 @@ $(function() {
 				legend: {
 				  display: true,
 				  labels: {
-					fontColor: '#585757',  
+					fontColor: '#ddd',  
 					boxWidth:40
 				  }
 				},
 				tooltips: {
-				  enabled:true,
-          displayColors:false
+				  enabled:false
 				},	
 			  scales: {
 				  xAxes: [{
 				  	  categoryPercentage: 0.3,
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }],
 				   yAxes: [{
 					ticks: {
 						beginAtZero:true,
-						fontColor: '#585757'
+						fontColor: '#ddd'
 					},
 					gridLines: {
 					  display: true ,
-					  color: "rgba(0, 0, 0, 0.05)"
+					  color: "rgba(221, 221, 221, 0.08)"
 					},
 				  }]
 				 }

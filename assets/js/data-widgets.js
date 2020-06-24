@@ -166,8 +166,8 @@ $(function() {
      var ctx = document.getElementById("data-chart4").getContext('2d');
 
       var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
-              gradientStroke1.addColorStop(0, '#ed3c50');  
-              gradientStroke1.addColorStop(1, '#f1076f'); 
+              gradientStroke1.addColorStop(0, 'rgba(255, 255, 255, 0.125)');  
+              gradientStroke1.addColorStop(1, 'rgba(255, 255, 255, 0.5)'); 
 
       var myChart = new Chart(ctx, {
         type: 'line',
@@ -222,15 +222,6 @@ $(function() {
 
      var ctx = document.getElementById("data-chart5").getContext('2d');
 
-       var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
-           gradientStroke1.addColorStop(0, '#00c8ff');  
-           gradientStroke1.addColorStop(0.4,'#8f50ff'); 
-           gradientStroke1.addColorStop(1, '#0072ff'); 
-
-       var gradientStroke2 = ctx.createLinearGradient(0, 0, 0, 300);
-           gradientStroke2.addColorStop(0, 'rgba(0, 200, 255, 0.4)');  
-           gradientStroke2.addColorStop(1, 'rgba(255, 255, 255, 0.0)'); 
-
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -238,8 +229,8 @@ $(function() {
           datasets: [{
             label: 'Total Earning',
             data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630],
-            backgroundColor: gradientStroke2,
-            borderColor: gradientStroke1,
+            backgroundColor: "rgba(255, 255, 255, 0.25)",
+            borderColor: "#fff",
             pointRadius :"0",
             pointHoverRadius:"0",
             borderWidth: 5
@@ -322,13 +313,7 @@ $(function() {
                   enabled: false,
                   theme: 'dark',
               },
-            fill: {
-                type: 'gradient',
-                gradient: {
-                    gradientToColors: [ '#ffff00', '#ff5447', '#00c8ff', '#8f50ff'],
-                },
-            },
-            colors: ["#e91e63", "#f1076f", '#0072ff', '#d13adf'],
+            colors: ["#ffffff", "rgba(255, 255, 255, 0.55)", 'rgba(255, 255, 255, 0.35)', 'rgba(255, 255, 255, 0.15)'],
             legend: {
               show:false,
                 formatter: function(val, opts) {
@@ -374,7 +359,7 @@ $(function() {
            hollow: {
             margin: 0,
             size: '70%',
-            background: '#000',
+            background: 'rgba(255, 255, 255, 0.0)',
             image: undefined,
             imageOffsetX: 0,
             imageOffsetY: 0,
@@ -388,7 +373,7 @@ $(function() {
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
@@ -425,14 +410,14 @@ $(function() {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#f1076f'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#ff5447"],
+      colors: ["#fff"],
       series: [75],
       stroke: {
         lineCap: 'round'
@@ -474,7 +459,7 @@ $(function() {
 			imageClipped: false
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
@@ -511,14 +496,14 @@ $(function() {
           shade: 'dark',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#fc00ff'],
+          gradientToColors: ['#fff'],
           inverseColors: true,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#0072ff"],
+      colors: ["#fff"],
       series: [75],
       stroke: {
         lineCap: 'round'
@@ -548,7 +533,7 @@ $(function() {
 					hollow: {
 						margin: 10,
 						size: '50%',
-						background: '#000'
+						background: 'rgba(0, 0, 0, 0.0)'
 					  },
                     startAngle: -225,
                     endAngle: 135,
@@ -601,13 +586,13 @@ $(function() {
               shade: 'dark',
               type: 'horizontal',
               shadeIntensity: 0.5,
-              gradientToColors: ['#f31368'],
+              gradientToColors: ['#fff'],
               inverseColors: false,
               opacityFrom: 1,
               opacityTo: 1,
               stops: [0, 100]
             }
-         }, colors: ["#0ce8fe"],
+         }, colors: ["#fff"],
             series: [87],
             labels: ['Median Ratio'],
             
@@ -630,12 +615,6 @@ $(function() {
 	 
 	 var ctx = document.getElementById('data-chart-12').getContext('2d');
 
-       var gradientStroke = ctx.createLinearGradient(0,230,0,50);
-
-      gradientStroke.addColorStop(1, 'rgba(255, 255, 255, 0.12)');
-      gradientStroke.addColorStop(0.2, 'rgba(255, 255, 255, 0.00)');
-      gradientStroke.addColorStop(0, 'rgba(255, 255, 255, 0.0)'); 
-
               
        var myChart = new Chart(ctx, {
         type: 'line',
@@ -644,7 +623,7 @@ $(function() {
           datasets: [{
             label: 'Total Orders',
             data: [50, 150, 100, 190, 130, 90, 100, 190, 120, 140],
-            backgroundColor: 'rgba(0, 0, 0, 0.65)',
+            backgroundColor: 'rgba(255, 255, 255, 0.25)',
             borderColor: '#fff',
             pointBackgroundColor:'#000',
             pointHoverBackgroundColor:'#fff',
@@ -706,13 +685,6 @@ $(function() {
        var ctx = document.getElementById('data-chart-13').getContext('2d');
 
 
-       var gradientStroke = ctx.createLinearGradient(0,230,0,50);
-
-      gradientStroke.addColorStop(1, 'rgba(255, 255, 255, 0.20)');
-      gradientStroke.addColorStop(0.2, 'rgba(255, 255, 255, 0.00)');
-      gradientStroke.addColorStop(0, 'rgba(255, 255, 255, 0.0)'); 
-
-              
        var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -720,7 +692,7 @@ $(function() {
           datasets: [{
             label: 'Total Revenue',
             data: [90, 100, 190, 50, 150, 100, 190, 130, 120, 140],
-            backgroundColor: 'rgba(0, 0, 0, 0.65)',
+            backgroundColor: 'rgba(255, 255, 255, 0.25)',
             borderColor: '#fff',
             pointBackgroundColor:'#000',
             pointHoverBackgroundColor:'#fff',
@@ -781,13 +753,6 @@ $(function() {
 
        var ctx = document.getElementById('data-chart-14').getContext('2d');
 
-
-       var gradientStroke = ctx.createLinearGradient(0,230,0,50);
-
-      gradientStroke.addColorStop(1, 'rgba(255, 255, 255, 0.20)');
-      gradientStroke.addColorStop(0.2, 'rgba(255, 255, 255, 0.00)');
-      gradientStroke.addColorStop(0, 'rgba(255, 255, 255, 0.0)'); 
-
               
        var myChart = new Chart(ctx, {
         type: 'line',
@@ -796,7 +761,7 @@ $(function() {
           datasets: [{
             label: 'Support Requests',
             data: [120, 140, 50, 90, 100, 190 ,150, 100, 190, 130],
-            backgroundColor: 'rgba(0, 0, 0, 0.65)',
+            backgroundColor: 'rgba(255, 255, 255, 0.25)',
             borderColor: '#fff',
             pointBackgroundColor:'#000',
             pointHoverBackgroundColor:'#fff',
@@ -858,13 +823,6 @@ $(function() {
 
        var ctx = document.getElementById('data-chart-15').getContext('2d');
 
-
-       var gradientStroke = ctx.createLinearGradient(0,230,0,50);
-
-      gradientStroke.addColorStop(1, 'rgba(255, 255, 255, 0.20)');
-      gradientStroke.addColorStop(0.2, 'rgba(255, 255, 255, 0.00)');
-      gradientStroke.addColorStop(0, 'rgba(255, 255, 255, 0.0)'); 
-
               
        var myChart = new Chart(ctx, {
         type: 'line',
@@ -873,7 +831,7 @@ $(function() {
           datasets: [{
             label: 'Messages',
             data: [30, 150, 100, 190, 130, 90, 100, 200, 120, 50],
-            backgroundColor: 'rgba(0, 0, 0, 0.65)',
+            backgroundColor: 'rgba(255, 255, 255, 0.25)',
             borderColor: '#fff',
             pointBackgroundColor:'#000',
             pointHoverBackgroundColor:'#fff',
@@ -962,15 +920,15 @@ $(function() {
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
-              enabled: true,
+              enabled: false,
               top: -3,
               left: 0,
               blur: 4,
-			        color: 'rgba(242, 14, 108, 0.65)',
+			  color: 'rgba(242, 14, 108, 0.65)',
               opacity: 0.5
             }
           },
@@ -980,14 +938,14 @@ $(function() {
             name: {
               offsetY: -5,
               show: true,
-              color: '#000',
+              color: '#fff',
               fontSize: '14px'
             },
             value: {
               formatter: function (val) {
 						return val + "%";
 					},
-              color: '#000',
+              color: '#fff',
               fontSize: '20px',
               show: true,
 			  offsetY: 10,
@@ -1001,14 +959,14 @@ $(function() {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#f1076f'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#ff5447"],
+      colors: ["#fff"],
       series: [80],
       stroke: {
         lineCap: 'round'
@@ -1059,11 +1017,11 @@ $(function() {
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
-              enabled: true,
+              enabled: false,
               top: -3,
               left: 0,
               blur: 4,
@@ -1077,14 +1035,14 @@ $(function() {
             name: {
               offsetY: -5,
               show: true,
-              color: '#000',
+              color: '#fff',
               fontSize: '14px'
             },
             value: {
               formatter: function (val) {
 						return val + "%";
 					},
-              color: '#000',
+              color: '#fff',
               fontSize: '20px',
               show: true,
 			  offsetY: 10,
@@ -1098,14 +1056,14 @@ $(function() {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#0072ff'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#00c8ff"],
+      colors: ["#fff"],
       series: [55],
       stroke: {
         lineCap: 'round'
@@ -1154,11 +1112,11 @@ $(function() {
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
-              enabled: true,
+              enabled: false,
               top: -3,
               left: 0,
               blur: 4,
@@ -1172,14 +1130,14 @@ $(function() {
             name: {
               offsetY: -5,
               show: true,
-              color: '#000',
+              color: '#fff',
               fontSize: '14px'
             },
             value: {
               formatter: function (val) {
 						return val + "%";
 					},
-              color: '#000',
+              color: '#fff',
               fontSize: '20px',
               show: true,
 			  offsetY: 10,
@@ -1193,14 +1151,14 @@ $(function() {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#f7971e'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#ffd200"],
+      colors: ["#fff"],
       series: [65],
       stroke: {
         lineCap: 'round'
@@ -1249,11 +1207,11 @@ $(function() {
             }
           },
           track: {
-            background: '#fff',
+            background: 'rgba(255, 255, 255, 0.12)',
             strokeWidth: '67%',
             margin: 0, // margin is in pixels
             dropShadow: {
-              enabled: true,
+              enabled: false,
               top: -3,
               left: 0,
               blur: 4,
@@ -1267,14 +1225,14 @@ $(function() {
             name: {
               offsetY: -5,
               show: true,
-              color: '#000',
+              color: '#fff',
               fontSize: '14px'
             },
             value: {
               formatter: function (val) {
 						return val + "%";
 					},
-              color: '#000',
+              color: '#fff',
               fontSize: '20px',
               show: true,
 			  offsetY: 10,
@@ -1288,14 +1246,14 @@ $(function() {
           shade: 'light',
           type: 'horizontal',
           shadeIntensity: 0.5,
-          gradientToColors: ['#08a50e'],
+          gradientToColors: ['#fff'],
           inverseColors: false,
           opacityFrom: 1,
           opacityTo: 1,
           stops: [0, 100]
         }
       },
-      colors: ["#cddc35"],
+      colors: ["#fff"],
       series: [75],
       stroke: {
         lineCap: 'round'
@@ -1739,13 +1697,13 @@ $(function() {
                     dataLabels: {
                         name: {
                             fontSize: '14px',
-                            color: '#000',
+                            color: '#fff',
                             offsetY: -5
                         },
                         value: {
                             offsetY: 0,
                             fontSize: '20px',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -1758,7 +1716,7 @@ $(function() {
                 gradient: {
                     shade: 'dark',
                     shadeIntensity: 0.15,
-					gradientToColors: ['#f1076f'],
+					gradientToColors: ['#fff'],
                     inverseColors: false,
                     opacityFrom: 1,
                     opacityTo: 1,
@@ -1768,7 +1726,7 @@ $(function() {
             stroke: {
                 dashArray: 4
             },
-			colors: ["#ff5447"],
+			colors: ["#fff"],
             series: [82],
             labels: ['Total'],
             
@@ -1830,13 +1788,13 @@ $(function() {
                     dataLabels: {
                         name: {
                             fontSize: '14px',
-                            color: '#000',
+                            color: '#fff',
                             offsetY: -10
                         },
                         value: {
                             offsetY: 0,
                             fontSize: '20px',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -1849,7 +1807,7 @@ $(function() {
                 gradient: {
                     shade: 'dark',
                     shadeIntensity: 0.15,
-                    gradientToColors: ['#00c8ff'],
+                    gradientToColors: ['#fff'],
                     inverseColors: false,
                     opacityFrom: 1,
                     opacityTo: 1,
@@ -1859,7 +1817,7 @@ $(function() {
             stroke: {
                 dashArray: 4
             },
-            colors: ["#0072ff"],
+            colors: ["#fff"],
             series: [85],
             labels: ['Total'],
             
@@ -1919,13 +1877,13 @@ $(function() {
                     dataLabels: {
                         name: {
                             fontSize: '14px',
-                            color: '#000',
+                            color: '#fff',
                             offsetY: -10
                         },
                         value: {
                             offsetY: 0,
                             fontSize: '20px',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -1938,7 +1896,7 @@ $(function() {
                 gradient: {
                     shade: 'dark',
                     shadeIntensity: 0.15,
-                    gradientToColors: ['#08a50e'],
+                    gradientToColors: ['#fff'],
                     inverseColors: false,
                     opacityFrom: 1,
                     opacityTo: 1,
@@ -1948,7 +1906,7 @@ $(function() {
             stroke: {
                 dashArray: 4
             },
-            colors: ["#cddc35"],
+            colors: ["#fff"],
             series: [79],
             labels: ['Total'],
             
@@ -2008,13 +1966,13 @@ $(function() {
                     dataLabels: {
                         name: {
                             fontSize: '14px',
-                            color: '#000',
+                            color: '#fff',
                             offsetY: -10
                         },
                         value: {
                             offsetY: 0,
                             fontSize: '20px',
-                            color: '#000',
+                            color: '#fff',
                             formatter: function (val) {
                                 return val + "%";
                             }
@@ -2027,7 +1985,7 @@ $(function() {
                 gradient: {
                     shade: 'dark',
                     shadeIntensity: 0.15,
-                    gradientToColors: ['#8f50ff'],
+                    gradientToColors: ['#fff'],
                     inverseColors: false,
                     opacityFrom: 1,
                     opacityTo: 1,
@@ -2037,7 +1995,7 @@ $(function() {
             stroke: {
                 dashArray: 4
             },
-            colors: ["#d13adf"],
+            colors: ["#fff"],
             series: [90],
             labels: ['Total'],
             
