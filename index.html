@@ -62,7 +62,7 @@ padding: 10px 10px 10px !important;
 </style>
 </head>
 
-<body class="bg-theme bg-theme2" >
+<body class="bg-theme bg-theme6" >
 
 <!-- start loader -->
    <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
@@ -99,7 +99,7 @@ padding: 10px 10px 10px !important;
 <div class="clearfix"></div>
 	
   <div class="content-wrapper" style="height:100%">
-    <div class="container-fluid" style="padding:0;height:100%;">
+    <div class="container-fluid" style="padding:0px 12px 0 12px;height:100%;">
      <div class="row" style="height:100%">
        <div class="col-12 col-lg-6 col-xl-12" id="map" style="height:100%;">
          					
@@ -231,7 +231,7 @@ padding: 10px 10px 10px !important;
         center: [116.62362,-1.05278],
         zoom: 3
     });
-
+	map.addControl(new mapboxgl.NavigationControl(), 'top-right');
     map.on('load', function() {
         // Add a source for the state polygons.
         map.addSource('states', {
@@ -246,11 +246,28 @@ padding: 10px 10px 10px !important;
             'type': 'fill',
             'source': 'states',
             'paint': {
-                'fill-color': 'rgba(225, 37, 17, 0.4)',
-                'fill-outline-color': 'rgba(225, 37, 17, 1)'
-            }
+				'fill-color': '#43484d',
+				'fill-opacity': [
+				'case',
+				['boolean', ['feature-state', 'hover'], false],
+				1,
+				0.5
+				]
+			}
         });
-
+		
+		map.addLayer({
+		'id': 'state-borders',
+		'type': 'line',
+		'source': 'states',
+		'layout': {},
+		'paint': {
+		'line-color': '#43484d',
+		'line-width': 2
+		}
+		});
+		
+						
         // When a click event occurs on a feature in the states layer, open a popup at the
         // location of the click, with description HTML from its properties.
         map.on('click', 'states-layer', function(e) {
@@ -268,7 +285,7 @@ padding: 10px 10px 10px !important;
 
         // Change the cursor to a pointer when the mouse is over the states layer.
         map.on('mouseenter', 'states-layer', function() {
-            map.getCanvas().style.cursor = 'pointer';
+            map.getCanvas().style.cursor = 'pointer';			
         });
 
         // Change it back to a pointer when it leaves.
