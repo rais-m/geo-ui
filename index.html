@@ -30,22 +30,46 @@
         margin: 0px;
 
     }
-
+	
    .topbar-nav .navbar {
 		background-color: rgba(32, 33, 40, 0.94)  !important;
 		border-bottom: 1px solid rgb(32, 33, 40) !important;
 	}
+	.carousel table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.carousel td, .carousel th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px 8px;
+}
+
+.carousel td:first-child {
+  background-color: #f8f7f7;
+}
+
+.carousel-indicators li{background-color: #312f2f;}
+.mapboxgl-popup{min-width:400px;z-index:9;}
+.mapboxgl-popup-close-button{z-index: 9;
+font-size: 18px;
+font-weight: bold;}
+.mapboxgl-popup-content{
+padding: 10px 10px 10px !important;
+}
 </style>
 </head>
 
-<body class="bg-theme bg-theme2" id="map">
+<body class="bg-theme bg-theme2" >
 
 <!-- start loader -->
    <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
    <!-- end loader -->
 
 <!-- Start wrapper-->
- <div id="wrapper" style="z-index:9;">
+ <div id="wrapper" style="z-index:9;height:100%;">
 
   <!--Start topbar header-->
 <header class="topbar-nav">
@@ -74,19 +98,14 @@
 
 <div class="clearfix"></div>
 	
-  <div class="content-wrapper">
-    <div class="container-fluid">
-     <div class="row mt-3">
-       <!--<div class="col-12 col-lg-6 col-xl-3">
-         
-            <button type="button" class="btn btn-github btn-sm mb-3 text-white">Download CSV</button>
-					
-			<a href="assets/images/graph.png" data-fancybox="group2">
-			<img src="assets/images/chart.png" alt="lightbox" class="lightbox-thumb img-thumbnail">
-			</a>					
+  <div class="content-wrapper" style="height:100%">
+    <div class="container-fluid" style="padding:0;height:100%;">
+     <div class="row" style="height:100%">
+       <div class="col-12 col-lg-6 col-xl-12" id="map" style="height:100%;">
+         					
              
-       </div>-->
-       <div class="col-12 col-lg-6 col-xl-3" style="position: absolute;left: 0;">
+       </div>
+       <div class="col-12 col-lg-6 col-xl-3  mt-3" style="position: absolute;left: 0;">
          <div class="card">
             <div class="card-body">
               <form>
@@ -169,7 +188,7 @@
      
 		
 		
-	    <div class="col-12 col-lg-6 col-xl-2" style="position: absolute;right: 0;">        
+	    <div class="col-12 col-lg-6 col-xl-2 mt-3" style="position: absolute;right: 0;">        
             <button type="button" class="btn btn-primary btn-sm mb-3 text-white">NLT</button>	
 			<button type="button" class="btn btn-primary btn-sm mb-3 text-white">NO2</button>				
         </div>
@@ -183,13 +202,11 @@
    <!--Start Back To Top Button-->
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!--End Back To Top Button-->
-	
-	
-	
+
 
   </div><!--End wrapper-->
 
-
+   
   <!-- Bootstrap core JavaScript-->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
@@ -203,59 +220,62 @@
   <!-- Custom scripts -->
   <script src="assets/js/app-script.js"></script>
   
-  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 
-
- 
-	<script>
+<script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoicmFpcy10bSIsImEiOiJjazhhcG9iaXAwNGYwM2x0cTV3MXNlMzJuIn0.xpAEjsKMI_hrKJPPcCmooQ';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11',
-center: [116.62362,-1.05278],
-zoom: 3
-});
-map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [116.62362,-1.05278],
+        zoom: 3
+    });
 
-map.on('load', function() {
-// Add a source for the state polygons.
-map.addSource('statesss', {
-'type': 'geojson',
-'data':
-'https://raw.githubusercontent.com/rais-m/geo-ui/master/assets/jsonfiles/map2.geojson'
-});
- 
-// Add a layer showing the state polygons.
-map.addLayer({
-'id': 'statess-layer',
-'type': 'fill',
-'source': 'statesss',
-'paint': {
-'fill-color': 'rgba(200, 100, 240, 0.4)',
-'fill-outline-color': 'rgba(200, 100, 240, 1)'
-}
-});
- 
-// When a click event occurs on a feature in the states layer, open a popup at the
-// location of the click, with description HTML from its properties.
-map.on('click', 'statess-layer', function(e) {
-new mapboxgl.Popup()
-.setLngLat(e.lngLat)
-.setHTML(e.features[0].properties.name)
-.addTo(map);
-});
- 
-// Change the cursor to a pointer when the mouse is over the states layer.
-map.on('mouseenter', 'statess-layer', function() {
-map.getCanvas().style.cursor = 'pointer';
-});
- 
-// Change it back to a pointer when it leaves.
-map.on('mouseleave', 'statess-layer', function() {
-map.getCanvas().style.cursor = '';
-});
-});
+    map.on('load', function() {
+        // Add a source for the state polygons.
+        map.addSource('states', {
+            'type': 'geojson',
+            'data':
+                'https://raw.githubusercontent.com/rais-m/geo-ui/master/assets/jsonfiles/Indonesia_provinces.geojson'
+        });
+
+        // Add a layer showing the state polygons.
+        map.addLayer({
+            'id': 'states-layer',
+            'type': 'fill',
+            'source': 'states',
+            'paint': {
+                'fill-color': 'rgba(225, 37, 17, 0.4)',
+                'fill-outline-color': 'rgba(225, 37, 17, 1)'
+            }
+        });
+
+        // When a click event occurs on a feature in the states layer, open a popup at the
+        // location of the click, with description HTML from its properties.
+        map.on('click', 'states-layer', function(e) {
+			var popup_html = '<h5 class="text-center">'+e.features[0].properties.NAME_1+'</h5><div id="carousel-4" class="carousel slide" data-ride="carousel" style="padding-bottom: 30px;"><ul class="carousel-indicators" style="margin-bottom: 0;"><li data-target="#carousel-4" data-slide-to="0" class="active"></li><li data-target="#carousel-4" data-slide-to="1"></li><li data-target="#carousel-4" data-slide-to="2"></li></ul><div class="carousel-inner"><div class="carousel-item active"><p class="text-center text-danger"><b>Zonal Statistics</b></p><table><tbody><tr><td>Country</td><td>'+e.features[0].properties.NAME_0+'</td></tr><tr><td>Admin Level</td><td>'+e.features[0].properties.NAME_1+'</td></tr><tr><td>Mean NO2</td><td></td></tr><tr><td>Median</td><td></td></tr><tr><td>#of pixels per boundary</td><td>3</td></tr></tbody></table></div><div class="carousel-item"><p class="text-center text-danger"><b>NO2 Time Series</b></p><div class="row"><div class="col-lg-7"> <img class="d-block w-100" src="assets/images/chart.png" alt="Chicago"></div><div class="col-lg-5"><div class="text-center pt-2"> <button class="btn btn-danger btn-square btn-sm mb-2">Download NO2 Graph</button> <button class="btn btn-danger btn-square btn-sm">Download NO2 CSV</button></div></div></div></div><div class="carousel-item"><p class="text-center text-danger"><b>Correlation Mobility & GDP</b></p><div class="row"><div class="col-lg-6"> <img class="d-block w-100" src="assets/images/chart.png" style="height:110px;"><div class="text-center p-2"> <button class="btn btn-danger btn-square btn-sm">Download Mobility Graph</button></div></div><div class="col-lg-6"> <img class="d-block w-100" src="assets/images/graph.png" style="height:110px;" ><div class="text-center p-2"> <button class="btn btn-danger btn-square btn-sm">Download GDP Graph</button></div></div></div></div></div></div>';
+            new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(popup_html)
+                .addTo(map);
+				
+				 /*new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(e.features[0].properties.NAME_1)
+                .addTo(map);*/
+        });
+
+        // Change the cursor to a pointer when the mouse is over the states layer.
+        map.on('mouseenter', 'states-layer', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'states-layer', function() {
+            map.getCanvas().style.cursor = '';
+        });
+    });
 </script>
 </body>
 </html>

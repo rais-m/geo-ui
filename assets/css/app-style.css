@@ -64,7 +64,7 @@ body {
    	background-color: #18191a;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    color: #e4e6eb;
+    color: #1d1d1e;
     letter-spacing: .5px;
 }
 [tabindex="-1"]:focus {
@@ -88,7 +88,7 @@ body {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-	  color: #e4e6eb;
+	  color: #1d1d1e;
 }
 .h1, h1 {
 	font-size: 48px;

@@ -33,7 +33,7 @@
         map.addSource('states', {
             'type': 'geojson',
             'data':
-                'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_1_states_provinces_shp.geojson'
+                'https://raw.githubusercontent.com/rais-m/geo-ui/master/assets/jsonfiles/Indonesia_provinces.geojson'
         });
 
         // Add a layer showing the state polygons.
@@ -52,7 +52,7 @@
         map.on('click', 'states-layer', function(e) {
             new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
-                .setHTML(e.features[0].properties.name)
+                .setHTML(e.features[0].properties.NAME_1)
                 .addTo(map);
         });
 
