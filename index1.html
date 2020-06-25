@@ -151,16 +151,16 @@ padding: 10px 10px 10px !important;
 				   <div class="form-group row">
 						<div class="col-sm-12">
 							<div class="icheck-material-warning" style="width: auto;float: left;margin-right: 13px;">
-								<input type="radio" name="mq_filter" id="month_r" checked="checked" value="month" class="mq_filter">
-								<label for="month_r">Month</label>
+								<input type="radio" name="region" id="country" checked="checked" value="country" class="type">
+								<label for="country">Month</label>
 							</div>
 							<div class="icheck-material-warning">
-								<input type="radio" name="mq_filter"  id="quarter_r"  class="mq_filter"  value="quarter" >
-								<label for="quarter_r">Quarter</label>
+								<input type="radio" name="region"  id="province"  class="type"  value="province" >
+								<label for="province">Quarter</label>
 							</div>
 						</div>
 				   </div>
-					 <div class="form-group row"  id="month_body">
+					 <div class="form-group row">
 					  <label for="input-21" class="col-sm-4 col-form-label">Month</label>
 					  <div class="col-sm-8">
 						<select class="form-control" id="year">
@@ -181,18 +181,6 @@ padding: 10px 10px 10px !important;
 					  </div>
 					</div>
 					
-					<div class="form-group row" id="quarter_body" style="display:none;">
-					  <label for="input-21" class="col-sm-4 col-form-label">Quarter</label>
-					  <div class="col-sm-8">
-						<select class="form-control" id="year">
-                            <option value='01'>Q1</option>
-							<option value='02'>Q2</option>
-							<option value='03'>Q3</option>
-							<option value='04'>Q4</option>
-                        </select>
-					  </div>
-					</div>
-					
 					
 					</form>
             </div>
@@ -205,13 +193,6 @@ padding: 10px 10px 10px !important;
             <button type="button" class="btn btn-primary btn-sm mb-3 text-white">NLT</button>	
 			<button type="button" class="btn btn-primary btn-sm mb-3 text-white">NO2</button>				
         </div>
-		
-		<div class="col-12 col-lg-6 col-xl-2 mb-3" style="position: absolute;left: 0;bottom:0;z-index9;"> 
-			<button class="btn btn-primary btn-sm " data-toggle="modal" data-target="#smallsizemodal2">Map Guide</button>		
-        </div>
-		<div class="col-12 col-lg-6 col-xl-2 mb-3" style="position: absolute;right: 0;bottom:0;z-index9;"> 
-			<button class="btn btn-primary btn-sm " data-toggle="modal" data-target="#smallsizemodal">Raw Data Download</button>
-		</div>
 	 
 	 </div>
 	  
@@ -314,69 +295,6 @@ padding: 10px 10px 10px !important;
             map.getCanvas().style.cursor = '';
         });
     });
-	
-	$(".mq_filter").change(function(){
-
-        var selValue = $("input[name='mq_filter']:checked").val();
-
-        if(selValue == 'month')
-		{
-			$('#month_body').show();
-			$('#quarter_body').hide();
-		}
-		else
-		{
-			$('#quarter_body').show();
-			$('#month_body').hide();
-		}
-
-    });
 </script>
-
-<!-- Modal - Raw Data Download -->
-<div class="modal fade text-white mb-4 mr-1" id="smallsizemodal" style="position: absolute; width: auto; height: auto; right: 0px !important; bottom: 0px !important;  left: auto;top: auto;">
-  <div class="modal-dialog modal-sm">
-	<div class="modal-content">
-	  <div class="modal-header">
-		<h5 class="modal-title text-white">Raw Data Download</h5>
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-	  </div>
-	  <div class="modal-body">
-		<p>Whole Level 1  all provinces
-		(Jan 2019-June 202)</p>
-		<p><a href="">Monthly</a> | <a href="">Quarterly</a></p>
-
-		<p>Whole Level 2 all regencies
-		(Jan 2019-June 202)</p>
-		<p><a href="">Monthly</a>  | <a href="">Quarterly</a></p>
-	  </div>
-	</div>
-  </div>
-</div>
-<!-- Modal end - Raw Data Download -->
-
-<!-- Modal - Raw Data Download -->
-<div class="modal fade text-white mb-4 ml-3" id="smallsizemodal2" style="position: absolute; width: auto; height: auto; bottom: 0px !important;top: auto;">
-  <div class="modal-dialog modal-sm" >
-	<div class="modal-content">
-	  <div class="modal-header">
-		<h5 class="modal-title text-white">Map Guide</h5>
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-	  </div>
-	  <div class="modal-body">
-		<p>Note 1</p>
-		<p>Note 2</p>
-		<p>Note 3</p>
-		
-	  </div>
-	</div>
-  </div>
-</div>
-<!-- Modal end - Raw Data Download -->
-
 </body>
 </html>
